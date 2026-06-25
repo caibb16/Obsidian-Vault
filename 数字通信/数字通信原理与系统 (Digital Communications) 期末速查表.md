@@ -46,6 +46,7 @@
     - 主瓣宽度 (Mainlobe width): $B_T = \frac{2}{T}$。
         
     - 频谱效率 (Spectral efficiency): $\eta = \frac{R_b}{B_T} = 0.5 \log_2 M$ (bps/Hz)。
+    - 功率谱密度 (Power Spectral Density): $S(f) = \frac{|G(f)|^2}{T}$。
         
 - **On-Off Signaling vs Antipodal (双极性):**
     
@@ -110,7 +111,8 @@
 
 **2. 哈夫曼编码 (Huffman Coding)**
 
-- **步骤:** 1) 将概率从大到小排序；
+- **步骤:** 
+	1) 将概率从大到小排序；
     
     2) 每次合并最小的两个概率；
     

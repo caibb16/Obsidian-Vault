@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "0266bdaf7f2fed1b",
+    "id": "0989f4055b8f9086",
     "type": "split",
     "children": [
       {
-        "id": "ca0dd6109357f81c",
+        "id": "918f19aa93b6bfd4",
         "type": "tabs",
         "children": [
           {
-            "id": "86d823df5952a258",
+            "id": "f28d48b27106c412",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "1e3bf6640f506151",
+    "id": "58c478b3ebc073ab",
     "type": "split",
     "children": [
       {
-        "id": "08a60bd43fb88343",
+        "id": "0f7327472bea2583",
         "type": "tabs",
         "children": [
           {
-            "id": "fbc7fd1690e03f35",
+            "id": "0cde3e0eaf3a1d93",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +48,7 @@
             }
           },
           {
-            "id": "8cf20e3ce99ece3d",
+            "id": "3b74406972804d6f",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +65,7 @@
             }
           },
           {
-            "id": "2322dc1fb3c3a74b",
+            "id": "0c5dfd06a6d10db5",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -78,23 +78,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 249.49999618530273
+    "width": 300
   },
   "right": {
-    "id": "fd2402876f396906",
+    "id": "ec4f4f3be5f60142",
     "type": "split",
     "children": [
       {
-        "id": "a17a9e25468c2bd6",
+        "id": "8e9f467bd451d37b",
         "type": "tabs",
         "children": [
           {
-            "id": "d28a019797f80274",
+            "id": "3ba2fcfe175e718c",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "欢迎.md",
+                "file": "数字通信/数字通信原理与系统 (Digital Communications) 期末速查表.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "欢迎 的反向链接列表"
+              "title": "数字通信原理与系统 (Digital Communications) 期末速查表 的反向链接列表"
             }
           },
           {
-            "id": "be70831d6ff8454a",
+            "id": "a892889701896e35",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "欢迎.md",
+                "file": "数字通信/数字通信原理与系统 (Digital Communications) 期末速查表.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "欢迎 的出链列表"
+              "title": "数字通信原理与系统 (Digital Communications) 期末速查表 的出链列表"
             }
           },
           {
-            "id": "f31a6fd4988b65b4",
+            "id": "1ef806caf8abe419",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,7 +137,7 @@
             }
           },
           {
-            "id": "152b07d15916cf32",
+            "id": "b59e681cc1c5ce82",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -151,32 +151,22 @@
             }
           },
           {
-            "id": "a5bf8e3850e50334",
+            "id": "7edcc12b87a2f0d7",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "欢迎.md",
+                "file": "数字通信/数字通信原理与系统 (Digital Communications) 期末速查表.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "欢迎 的大纲"
+              "title": "数字通信原理与系统 (Digital Communications) 期末速查表 的大纲"
             }
           },
           {
-            "id": "b42921164e60f8e2",
-            "type": "leaf",
-            "state": {
-              "type": "claudian-view",
-              "state": {},
-              "icon": "bot",
-              "title": "Claudian"
-            }
-          },
-          {
-            "id": "d9894d43606f1d8c",
+            "id": "5a927029dad43ddf",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -186,11 +176,11 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 622.5
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -201,30 +191,27 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "bases:新建数据库": false,
-      "realclaudian:Open Claudian": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fbc7fd1690e03f35",
+  "active": "f28d48b27106c412",
   "lastOpenFiles": [
-    "RL-VLN/05_References_with_Links.md",
     "数字通信/数字通信原理与系统 (Digital Communications) 期末速查表.md",
-    "数字通信",
-    "RL-VLN/Direction_A_Curriculum_Hierarchical_RL.md",
-    "RL-VLN/04_AB_Combination_Feasibility.md",
+    "欢迎.md",
+    "VLN.md",
+    "RL-VLN/vln-r1.pdf",
+    "RL-VLN/Zhang 等 - 2025 - ActiveVLN Towards Active Exploration via Multi-Turn RL in Vision-and-Language Navigation.pdf",
+    "RL-VLN/Qi 等 - 2025 - VLN-R1 Vision-Language Navigation via Reinforcement Fine-Tuning.pdf",
+    "RL-VLN/Direction_C_Language_Conditioned_Policy.md",
     "RL-VLN/Direction_B_Multimodal_Verifiable_Reward.md",
+    "RL-VLN/Direction_A_Curriculum_Hierarchical_RL.md",
+    "RL-VLN/05_References_with_Links.md",
+    "RL-VLN/04_AB_Combination_Feasibility.md",
     "RL-VLN/03_Literature_Gap_Scan_2026.md",
     "RL-VLN/02_References_Quick_Index.md",
-    "RL-VLN/vln-r1.pdf",
-    "RL-VLN/Qi 等 - 2025 - VLN-R1 Vision-Language Navigation via Reinforcement Fine-Tuning.pdf",
-    "RL-VLN/Zhang 等 - 2025 - ActiveVLN Towards Active Exploration via Multi-Turn RL in Vision-and-Language Navigation.pdf",
-    "VLN.md",
-    "RL-VLN/00_Overview_RL_VLN_Innovation_Directions.md",
-    "RL-VLN/Direction_C_Language_Conditioned_Policy.md",
     "RL-VLN/01_Two_Papers_Comparison.md",
+    "RL-VLN/00_Overview_RL_VLN_Innovation_Directions.md",
     "RL-VLN",
-    "未命名.base",
-    "未命名 1.base",
-    "未命名 2.base"
+    "数字通信"
   ]
 }
