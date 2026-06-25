@@ -1,0 +1,23 @@
+{
+  "id": "conv-1782025761676-4405nkg2a",
+  "providerId": "claude",
+  "title": "Explain Claude conversation data privacy with G...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1782025761679,
+  "updatedAt": 1782025941757,
+  "lastResponseAt": 1782025889945,
+  "sessionId": "f8c411d6-b1ef-4671-bbe5-464b2bd66fa3",
+  "providerState": {
+    "providerSessionId": "f8c411d6-b1ef-4671-bbe5-464b2bd66fa3"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 29573,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 128,
+    "contextWindow": 200000,
+    "contextTokens": 29701,
+    "percentage": 15,
+    "contextWindowIsAuthoritative": true
+  }
+}
