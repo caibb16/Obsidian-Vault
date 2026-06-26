@@ -1,0 +1,1138 @@
+{
+  "id": "conv-1782026053015-snibtbomo",
+  "providerId": "claude",
+  "title": "Analyze RL-VLN papers for thesis innovation dir...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1782026053016,
+  "updatedAt": 1782043869861,
+  "lastResponseAt": 1782043869861,
+  "sessionId": "44bb591b-ba36-4c12-952d-426bb135583d",
+  "providerState": {
+    "providerSessionId": "44bb591b-ba36-4c12-952d-426bb135583d",
+    "subagentData": {
+      "call_function_l9vkazyhhhes_2": {
+        "id": "call_function_l9vkazyhhhes_2",
+        "description": "扫描课程式/分层RL在VLN中的竞争工作",
+        "prompt": "在 2024-2026 年间，搜索 Vision-and-Language Navigation (VLN) 领域是否已有**课程学习（Curriculum Learning）或分层强化学习（Hierarchical RL）**的相关工作，特别是与 MLLM（如 Qwen2-VL）结合的。\n\n已知 baseline：\n- ActiveVLN (arXiv:2509.12618, 2025-09) - 端到端 multi-turn GRPO，无课程/分层\n- VLN-R1 (arXiv:2506.17221, 2025-06) - single-turn RFT，无课程/分层\n\n请通过 Google Scholar / arXiv / Semantic Scholar 搜索，验证以下问题：\n1. 2024-2026 是否有任何工作将**课程学习**（curriculum learning）应用于 VLN-RL 训练？\n2. 2024-2026 是否有任何工作使用**分层架构**（Manager/Worker、Options、Feudal）做 VLN？\n3. 2024-2026 是否有任何工作将 **HIRO / FeudalNet / Options** 应用到 MLLM-based embodied agent？\n\n输出要求（500 字以内）：\n- 列出找到的相关工作（标题、arXiv ID、机构、核心 idea、与 ActiveVLN/VLN-R1 的差异）\n- 评估\"方向 A：课程式/分层 RL\"在 2026 年还有多少创新空间\n- 给出 1-2 句结论：这个方向会不会撞车？是 \"安全区\" 还是 \"红海\"？\n\n使用 WebSearch 工具（建议 5-8 次搜索），不需 fetch 论文全文。仅返回关键发现列表。",
+        "mode": "async",
+        "isExpanded": false,
+        "status": "running",
+        "toolCalls": [
+          {
+            "id": "call_qsdJa2HV8c0f6mLvz3oqK0jF",
+            "name": "WebSearch",
+            "input": {
+              "query": "curriculum learning vision-and-language navigation reinforcement learning 2024 2025 arxiv"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"curriculum learning vision-and-language navigation reinforcement learning 2024 2025 arxiv\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_lqfPFDRbM2GuLrJMjdl0Brzb",
+            "name": "WebSearch",
+            "input": {
+              "query": "hierarchical reinforcement learning vision-language navigation VLN 2024 2025"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"hierarchical reinforcement learning vision-language navigation VLN 2024 2025\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_y5oMiAalDF7adk84mX9pIrpf",
+            "name": "WebSearch",
+            "input": {
+              "query": "curriculum learning vision-language navigation VLN reinforcement learning arxiv 2024"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"curriculum learning vision-language navigation VLN reinforcement learning arxiv 2024\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_y3NJXy88HEcRH6CpAPi7O4Iu",
+            "name": "WebSearch",
+            "input": {
+              "query": "hierarchical reinforcement learning vision language navigation 2024 2025 arxiv"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"hierarchical reinforcement learning vision language navigation 2024 2025 arxiv\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_g2NNyE4kBCblZX48KeK9e6de",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22vision-and-language+navigation%22+AND+all:%22curriculum+learning%22&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates from the results"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "# ArXiv Search Results\n\nHere are the papers matching the query \"vision-and-language navigation\" AND \"curriculum learning\":\n\n**1. SpaAct: Spatially-Activated Transition Learning with Curriculum Adaptation for Vision-Language Navigation**\n- **arXiv ID:** 2604.27620v1\n- **Submitted:** 2026-04-30\n\n**2. Curriculum Learning for Vision-and-Language Navigation**\n- **arXiv ID:** 2111.07228v1\n- **Submitted:** 2021-11-14\n\nTotal results returned: 2"
+          },
+          {
+            "id": "call_Ee5KYXTmJuzakfA0QIswN3zP",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22vision-language+navigation%22+AND+all:%22hierarchical%22+AND+all:%22reinforcement+learning%22&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates from the results"
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "Permission for this action was denied by the Claude Code auto mode classifier. Reason: Stage 2 classifier error - blocking based on stage 1 assessment (usually transient — retrying often succeeds). If you have other tasks that don't depend on this action, continue working on those. IMPORTANT: You *may* attempt to accomplish this action using other tools that might naturally be used to accomplish this goal, e.g. using head instead of cat. But you *should not* attempt to work around this denial in malicious ways, e.g. do not use your ability to run tests to execute non-test actions. You should only try to work around this restriction in reasonable ways that do not attempt to bypass the intent behind this denial. If you believe this capability is essential to complete the user's request, STOP and explain to the user what you were trying to do and why you need this permission. Let the user decide how to proceed. To allow this type of action in the future, the user can add a Bash permission rule to their settings."
+          },
+          {
+            "id": "call_s1hWfvX2HtvHh3Q6XVrz1AS1",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22vision-and-language+navigation%22+AND+all:%22hierarchical%22&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "# arXiv Papers: Vision-and-Language Navigation + Hierarchical\n\n1. **SpaceVLN: A Zero-Shot Vision-and-Language Navigation Agent with Online Spatial Cognitive Memory and Reasoning**\n   - arXiv ID: 2606.08992v1\n   - Submitted: 2026-06-08\n\n2. **P2DNav: Panorama-to-Downview Reasoning for Zero-shot Vision-and-Language Navigation**\n   - arXiv ID: 2605.19634v1\n   - Submitted: 2026-05-19\n\n3. **Three-Step Nav: A Hierarchical Global-Local Planner for Zero-Shot Vision-and-Language Navigation**\n   - arXiv ID: 2604.26946v1\n   - Submitted: 2026-04-29\n\n4. **A Deployable Embodied Vision-Language Navigation System with Hierarchical Cognition and Context-Aware Exploration**\n   - arXiv ID: 2604.21363v2\n   - Submitted: 2026-04-23\n\n5. **Vision-Language Navigation for Aerial Robots: Towards the Era of Large Language Models**\n   - arXiv ID: 2604.07705v1\n   - Submitted: 2026-04-09\n\n6. **HiMemVLN: Enhancing Reliability of Open-Source Zero-Shot Vision-and-Language Navigation with Hierarchical Memory System**\n   - arXiv ID: 2603.14807v1\n   - Submitted: 2026-03-16\n\n7. **All-day Multi-scenes Lifelong Vision-and-Language Navigation with Tucker Adaptation**\n   - arXiv ID: 2603.14276v1\n   - Submitted: 2026-03-15\n\n8. **HaltNav: Reactive Visual Halting over Lightweight Topological Priors for Robust Vision-Language Navigation**\n   - arXiv ID: 2603.12696v2\n   - Submitted: 2026-03-13\n\n9. **NaVIDA: Vision-Language Navigation with Inverse Dynamics Augmentation**\n   - arXiv ID: 2601.18188v2\n   - Submitted: 2026-01-26\n\n10. **GROKE: Vision-Free Navigation Instruction Evaluation via Graph Reasoning on OpenStreetMap**\n    - arXiv ID: 2601.07375v1\n    - Submitted: 2026-01-12\n\n11. **SeqWalker: Sequential-Horizon Vision-and-Language Navigation with Hierarchical Planning**\n    - arXiv ID: 2601.04699v1\n    - Submitted: 2026-01-08\n\n12. **CLASH: Collaborative Large-Small Hierarchical Framework for Continuous Vision-and-Language Navigation**\n    - arXiv ID: 2512.10360v2\n    - Submitted: 2025-12-11\n\n13. **UNeMo: Collaborative Visual-Language Reasoning and Navigation via a Multimodal World Model**\n    - arXiv ID: 2511.18845v2\n    - Submitted: 2025-11-24\n\n14. **Mem4Nav: Boosting Vision-and-Language Navigation in Urban Environments with a Hierarchical Spatial-Cognition Long-Short Memory System**\n    - arXiv ID: 2506.19433v2\n    - Submitted: 2025-06-24\n\n15. **Dynam3D: Dynamic Layered 3D Tokens Empower VLM for Vision-and-Language Navigation**\n    - arXiv ID: 2505.11383v1\n    - Submitted: 2025-05-16\n\n16. **CityNavAgent: Aerial Vision-and-Language Navigation with Hierarchical Semantic Planning and Global Memory**\n    - arXiv ID: 2505.05622v1\n    - Submitted: 2025-05-08\n\n17. **Think Hierarchically, Act Dynamically: Hierarchical Multi-modal Fusion and Reasoning for Vision-and-Language Navigation**\n    - arXiv ID: 2504.16516v2\n    - Submitted: 2025-04-23\n\n18. **ST-Booster: An Iterative SpatioTemporal Perception Booster for Vision-and-Language Navigation in Continuous Environments**\n    - arXiv ID: 2504.09843v2\n    - Submitted: 2025-04-14\n\n19. **FlexVLN: Flexible Adaptation for Diverse Vision-and-Language Navigation Tasks**\n    - arXiv ID: 2503.13966v1\n    - Submitted: 2025-03-18\n\n20. **NavRAG: Generating User Demand Instructions for Embodied Navigation through Retrieval-Augmented LLM**\n    - arXiv ID: 2502.11142v3\n    - Submitted: 2025-02-16\n\n**Total results in query:** 29 entries (20 shown on this page)"
+          },
+          {
+            "id": "call_KJn49DzwaxriLWGuaKph4OCm",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22embodied+agent%22+AND+all:%22hierarchical+reinforcement+learning%22+AND+all:%22MLLM%22&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "The arXiv query returned no results.\n\n- **Total results:** 0\n- **Papers listed:** None\n\nThe feed contains only metadata (query URL, timestamps, pagination) with zero matching papers for the combined search of \"embodied agent,\" \"hierarchical reinforcement learning,\" and \"MLLM.\""
+          },
+          {
+            "id": "call_EZ7437zDrMCYMXj8YFmwfzJT",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22VLN%22+AND+all:%22hierarchical%22+AND+all:%22reinforcement+learning%22&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Paper 1:\n- Title: \"Hierarchical Semantic-Augmented Navigation: Optimal Transport and Graph-Driven Reasoning for Vision-Language Navigation\"\n- arXiv ID: 2606.01565v1\n- Submission date: 2026-06-01\n\nPaper 2:\n- Title: \"History Aware Multimodal Transformer for Vision-and-Language Navigation\"\n- arXiv ID: 2110.13309v2\n- Submission date: 2021-10-25"
+          },
+          {
+            "id": "call_LO7EesWbNQL6C7nbWpJEhD3t",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22hierarchical+reinforcement+learning%22+AND+all:%22Qwen%22+AND+all:%22navigation%22&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "The arXiv API response indicates that the search query returned no results.\n\n- **Total results:** 0\n- **Items per page:** 20\n- **Query used:** search for \"hierarchical reinforcement learning\" AND \"Qwen\" AND \"navigation\"\n\nNo paper titles, arXiv IDs, or submission dates are available to list, as the `<opensearch:totalResults>` element shows zero matches in the feed."
+          },
+          {
+            "id": "call_fB0mHzupeIaQbxhfZuLOs4ab",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22HIRO%22+OR+all:%22FeudalNet%22+OR+all:%22options+framework%22+AND+all:%22embodied%22&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "# arXiv Query Results (20 entries)\n\n1. **HiRo: A Compact Four-Directional Hierarchical Reservoir Token-Mixer for Efficient Image Classification**\n   - ID: 2606.15151v1\n   - Date: 2026-06-13\n\n2. **Robust Control of ECH Deposition Profiles on DIII-D**\n   - ID: 2606.13661v1\n   - Date: 2026-06-11\n\n3. **Compact Experimental Negative TriAngUlarity Reactor (CENTAUR): A design study for a compact, affordable breakeven tokamak**\n   - ID: 2605.27549v1\n   - Date: 2026-05-26\n\n4. **Middle convolution for Lie algebra representations**\n   - ID: 2605.09828v2\n   - Date: 2026-05-11\n\n5. **Offline Reinforcement Learning for Rotation Profile Control in Tokamaks**\n   - ID: 2605.05857v2\n   - Date: 2026-05-07\n\n6. **MMAudio-LABEL: Audio Event Labeling via Audio Generation for Silent Video**\n   - ID: 2605.00495v1\n   - Date: 2026-05-01\n\n7. **Wigner functions, negativity volumes, and experimental generation of Pegg-Barnett phase-operator eigenstates**\n   - ID: 2604.23086v1\n   - Date: 2026-04-25\n\n8. **Amplitudes of Hall field-induced resistance oscillations with a two-harmonic density of states**\n   - ID: 2604.15700v1\n   - Date: 2026-04-17\n\n9. **Psychological Concept Neurons: Can Neural Control Bias Probing and Shift Generation in LLMs?**\n   - ID: 2604.11802v1\n   - Date: 2026-04-13\n\n10. **HiRO-Nav: Hybrid ReasOning Enables Efficient Embodied Navigation**\n    - ID: 2604.08232v1\n    - Date: 2026-04-09\n\n11. **Reconstruction of instantaneous flow fields from transient velocity snapshots using physics-informed neural networks: Applications to pulsatile blood flow behind a stenosis**\n    - ID: 2602.01542v2\n    - Date: 2026-02-02\n\n12. **The two-time Leggett-Garg inequalities of a superconducting qubit interacting with thermal photons in a cavity**\n    - ID: 2601.10946v1\n    - Date: 2026-01-16\n\n13. **On the Riemann-Hilbert problem for hyperplane arrangements with a good line**\n    - ID: 2601.00544v3\n    - Date: 2026-01-02\n\n14. **HiRO-ACE: Fast and skillful AI emulation and downscaling trained on a 3 km global storm-resolving model**\n    - ID: 2512.18224v2\n    - Date: 2025-12-20\n\n15. **FedPM: Federated Learning Using Second-order Optimization with Preconditioned Mixing of Local Parameters**\n    - ID: 2511.09100v1\n    - Date: 2025-11-12\n\n16. **Enabling Integrated AI Control on DIII-D: A Control System Design with State-of-the-art Experiments**\n    - ID: 2511.08818v1\n    - Date: 2025-11-11\n\n17. **Application and quantum properties of superpositions of oppositely squeezed states**\n    - ID: 2511.03204v2\n    - Date: 2025-11-05\n\n18. **Unfolding of wild character varieties**\n    - ID: 2511.01221v1\n    - Date: 2025-11-03\n\n19. **New nonabelian Hodge graphs from twisted irregular connections**\n    - ID: 2509.24861v1\n    - Date: 2025-09-29\n\n20. **Measuring How LLMs Internalize Human Psychological Concepts: A preliminary analysis**\n    - ID: 2506.23055v1\n    - Date: 2025-06-29\n\nTotal results in query: 271"
+          },
+          {
+            "id": "call_FHPdDcozZePhjAlaeyGvhpBM",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22curriculum%22+AND+all:%22vision-and-language+navigation%22&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1. **\"SpaAct: Spatially-Activated Transition Learning with Curriculum Adaptation for Vision-Language Navigation\"**\n   - arXiv ID: 2604.27620v1\n   - Submitted: 2026-04-30\n\n2. **\"Rule-VLN: Bridging Perception and Compliance via Semantic Reasoning and Geometric Rectification\"**\n   - arXiv ID: 2604.16993v1\n   - Submitted: 2026-04-18\n\n3. **\"Navigating Beyond Instructions: Vision-and-Language Navigation in Obstructed Environments\"**\n   - arXiv ID: 2407.21452v1\n   - Submitted: 2024-07-31\n\n4. **\"Curriculum Learning for Vision-and-Language Navigation\"**\n   - arXiv ID: 2111.07228v1\n   - Submitted: 2021-11-14\n\n5. **\"BabyWalk: Going Farther in Vision-and-Language Navigation by Taking Baby Steps\"**\n   - arXiv ID: 2005.04625v2\n   - Submitted: 2020-05-10\n\n6. **\"Improving Vision-and-Language Navigation with Image-Text Pairs from the Web\"**\n   - arXiv ID: 2004.14973v2\n   - Submitted: 2020-04-30"
+          },
+          {
+            "id": "call_cDQkE0SDOuetbkjtr5cY73BZ",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22vision-language+navigation%22+AND+all:%22subgoal%22+AND+all:%22reinforcement%22&start=0&max_results=15&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "Permission for this action was denied by the Claude Code auto mode classifier. Reason: Stage 2 classifier error - blocking based on stage 1 assessment (usually transient — retrying often succeeds). If you have other tasks that don't depend on this action, continue working on those. IMPORTANT: You *may* attempt to accomplish this action using other tools that might naturally be used to accomplish this goal, e.g. using head instead of cat. But you *should not* attempt to work around this denial in malicious ways, e.g. do not use your ability to run tests to execute non-test actions. You should only try to work around this restriction in reasonable ways that do not attempt to bypass the intent behind this denial. If you believe this capability is essential to complete the user's request, STOP and explain to the user what you were trying to do and why you need this permission. Let the user decide how to proceed. To allow this type of action in the future, the user can add a Bash permission rule to their settings."
+          },
+          {
+            "id": "call_MUnyne9YUc9pAxS7Ck2rcvtM",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22embodied+navigation%22+AND+all:%22manager+worker%22+OR+all:%22high-level+policy%22+AND+all:%22low-level+policy%22&start=0&max_results=15&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "The arXiv query returned no results. The feed shows:\n\n- **Total results:** 0\n- **Items per page:** 15\n- **Query:** Searched for papers matching \"embodied navigation\" combined with \"manager worker\" OR (\"high-level policy\" AND \"low-level policy\")\n\nThere are no papers, arXiv IDs, or submission dates to list because the search produced zero matches."
+          },
+          {
+            "id": "call_sJDuwNtqj6jd3MhAqx5W54lm",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22MLLM%22+OR+all:%22multimodal+large+language+model%22+AND+all:%22hierarchical%22+AND+all:%22agent%22&start=0&max_results=15&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Based on the arXiv feed, here are the papers:\n\n1. **StylisticBias: A Few Human Visual Cues Drive Most Social Biases in MLLMs**\n   - arXiv ID: 2606.20527v1\n   - Submitted: 2026-06-18\n\n2. **ELVA: Exploring Ranking-Driven Universal Multimodal Retrieval**\n   - arXiv ID: 2606.20280v1\n   - Submitted: 2026-06-18\n\n3. **Evaluating and Enhancing Negation Comprehension in Remote Sensing MLLMs**\n   - arXiv ID: 2606.20177v1\n   - Submitted: 2026-06-18\n\n4. **ROSE: Benchmarking the Perception-to-Action Gap in Multimodal Models**\n   - arXiv ID: 2606.19965v1\n   - Submitted: 2026-06-18\n\n5. **Stellar: Scalable Multimodal Document Retrieval for Natural Language Queries**\n   - arXiv ID: 2606.19960v1\n   - Submitted: 2026-06-18\n\n6. **Confidence Calibration for Multimodal LLMs: An Empirical Study through Medical VQA**\n   - arXiv ID: 2606.19950v1\n   - Submitted: 2026-06-18\n\n7. **Timage: A Generative Text-in-Image Paradigm for Fine-Tuning Vision-Language Models**\n   - arXiv ID: 2606.19944v1\n   - Submitted: 2026-06-18\n\n8. **MobileForge: Annotation-Free Adaptation for Mobile GUI Agents with Hierarchical Feedback-Guided Policy Optimization**\n   - arXiv ID: 2606.19930v1\n   - Submitted: 2026-06-18\n\n9. **CARE: Competence-Aware Reward Shaping for Adaptive Reasoning Length in Video-MLLMs**\n   - arXiv ID: 2606.19927v1\n   - Submitted: 2026-06-18\n\n10. **MemGUI-Agent: An End-to-End Long-Horizon Mobile GUI Agent with Proactive Context Management**\n    - arXiv ID: 2606.19926v1\n    - Submitted: 2026-06-18\n\n11. **SpatialSV: Internalizing Interpretable 3D Spatial Awareness in MLLMs via Task-Oriented Visual Supervision**\n    - arXiv ID: 2606.19915v1\n    - Submitted: 2026-06-18\n\n12. **One-to-Two Acting: A Novel Framework for Single-arm Agent Action Expansion to Dual Arms**\n    - arXiv ID: 2606.19897v1\n    - Submitted: 2026-06-18\n\n13. **3D-PLOT-LLM: Part-Level Object Tokens for 3D Large Language Models**\n    - arXiv ID: 2606.19828v1\n    - Submitted: 2026-06-18\n\n14. **Code-Switching Reveals Language Anchoring in Multilingual LLMs**\n    - arXiv ID: 2606.19668v1\n    - Submitted: 2026-06-18\n\n15. **PerceptionDLM: Parallel Region Perception with Multimodal Diffusion Language Models**\n    - arXiv ID: 2606.19534v1\n    - Submitted: 2026-06-17"
+          },
+          {
+            "id": "call_5T6OaAtLWABxCVDWQek9OIXm",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22Qwen2-VL%22+AND+all:%22navigation%22+AND+all:%22reinforcement%22&start=0&max_results=15&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Based on the feed content, the arXiv query for \"Qwen2-VL\" AND \"navigation\" AND \"reinforcement\" returned zero results, as indicated by `<opensearch:totalResults>0</opensearch:totalResults>`.\n\nThere are no paper titles, arXiv IDs, or submission dates to list."
+          },
+          {
+            "id": "call_3wcFT0sQcBDGPDI94ilfYgdF",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22RAGEN%22+OR+all:%22Search-R1%22+OR+all:%22GRPO%22+AND+all:%22hierarchical%22+AND+all:%22navigation%22&start=0&max_results=15&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Here is a list of the paper titles, arXiv IDs, and submission dates from the feed:\n\n1. **BAGEN: Are LLM Agents Budget-Aware?**\n   - arXiv ID: 2606.00198v1\n   - Published: 2026-05-29\n\n2. **Deconstructing Spatial Complexity: Hierarchical Decomposition for LLM Spatial Reasoning**\n   - arXiv ID: 2605.28144v1\n   - Published: 2026-05-27\n\n3. **StepGap: A Hybrid NLI-LLM Checker for Step-Level Evidence-Gap Detection in Multi-Hop Question Answering**\n   - arXiv ID: 2605.24733v1\n   - Published: 2026-05-23\n\n4. **Harnessing LLM Agents with Skill Programs**\n   - arXiv ID: 2605.17734v1\n   - Published: 2026-05-18\n\n5. **Reproducing Complex Set-Compositional Information Retrieval**\n   - arXiv ID: 2605.03824v1\n   - Published: 2026-05-05\n\n6. **S³-R1: Learning to Retrieve and Answer Step-by-Step with Synthetic Data**\n   - arXiv ID: 2605.01248v3\n   - Published: 2026-05-02\n\n7. **CoSearch: Joint Training of Reasoning and Document Ranking via Reinforcement Learning for Agentic Search**\n   - arXiv ID: 2604.17555v2\n   - Published: 2026-04-19\n\n8. **RAGEN-2: Reasoning Collapse in Agentic RL**\n   - arXiv ID: 2604.06268v1\n   - Published: 2026-04-07\n\n9. **Test-Time Strategies for More Efficient and Accurate Agentic RAG**\n   - arXiv ID: 2603.12396v1\n   - Published: 2026-03-12\n\n10. **Improving Search Agent with One Line of Code**\n    - arXiv ID: 2603.10069v1\n    - Published: 2026-03-10\n\n11. **Truncated Step-Level Sampling with Process Rewards for Retrieval-Augmented Reasoning**\n    - arXiv ID: 2602.23440v3\n    - Published: 2026-02-26\n\n12. **Search-P1: Path-Centric Reward Shaping for Stable and Efficient Agentic RAG Training**\n    - arXiv ID: 2602.22576v1\n    - Published: 2026-02-26\n\n13. **How to Train Your Deep Research Agent? Prompt, Reward, and Policy Optimization in Search-R1**\n    - arXiv ID: 2602.19526v1\n    - Published: 2026-02-23\n\n14. **SE-Search: Self-Evolving Search Agent via Memory and Dense Reward**\n    - arXiv ID: 2603.03293v1\n    - Published: 2026-02-06\n\n15. **Adaptive Information Control for Search-Augmented LLM Reasoning**\n    - arXiv ID: 2602.01672v2\n    - Published: 2026-02-02"
+          },
+          {
+            "id": "call_pUAhXpE1BnRmeJl2pfbfo5Y7",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22curriculum+learning%22+AND+all:%22GRPO%22+AND+all:%22navigation%22&start=0&max_results=15&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "claude-sonnet-4-6 is temporarily unavailable, so auto mode cannot determine the safety of WebFetch right now. Wait briefly and then try this action again. If it keeps failing, continue with other tasks that don't require this action and come back to it later. Note: reading files, searching code, and other read-only operations do not require the classifier and can still be used."
+          },
+          {
+            "id": "call_puWIwqsOSPArhXGvGfuvR2nE",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22hierarchical+policy%22+AND+all:%22MLLM%22+OR+all:%22VLM%22+AND+all:%22embodied%22&start=0&max_results=15&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "claude-sonnet-4-6 is temporarily unavailable, so auto mode cannot determine the safety of WebFetch right now. Wait briefly and then try this action again. If it keeps failing, continue with other tasks that don't require this action and come back to it later. Note: reading files, searching code, and other read-only operations do not require the classifier and can still be used."
+          },
+          {
+            "id": "call_ZKyCoQbKs9JonVmIfAikh14Y",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22VLN%22+AND+all:%22curriculum%22+AND+all:%22GRPO%22+OR+all:%22PPO%22+OR+all:%22reinforcement%22&start=0&max_results=15&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "claude-sonnet-4-6 is temporarily unavailable, so auto mode cannot determine the safety of WebFetch right now. Wait briefly and then try this action again. If it keeps failing, continue with other tasks that don't require this action and come back to it later. Note: reading files, searching code, and other read-only operations do not require the classifier and can still be used."
+          },
+          {
+            "id": "call_JtukAOKe8w6nKOxuQU05fTjs",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22curriculum+learning%22+AND+all:%22GRPO%22+AND+all:%22navigation%22&start=0&max_results=15&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Here are the papers from the arXiv query results:\n\n**1. \"From Imitation to Discrimination: Progressive Curriculum Learning for Robust Web Navigation\"**\n- arXiv ID: 2604.12666v1\n- Submission date: 2026-04-14\n\n**2. \"Goldilocks RL: Tuning Task Difficulty to Escape Sparse Rewards for Reasoning\"**\n- arXiv ID: 2602.14868v2\n- Submission date: 2026-02-16\n\n**3. \"Angles Don't Lie: Unlocking Training-Efficient RL Through the Model's Own Signals\"**\n- arXiv ID: 2506.02281v2\n- Submission date: 2025-06-02\n\nTotal results returned by the query: 3."
+          },
+          {
+            "id": "call_1fpjg39RqbTVaHpLUbS9I4OG",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22hierarchical+policy%22+AND+all:%22MLLM%22+AND+all:%22embodied%22&start=0&max_results=15&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "The arXiv query returned **no results**.\n\n- **Total results:** 0\n- **Items per page:** 15\n\nThere are no paper titles, arXiv IDs, or submission dates to list from this feed."
+          },
+          {
+            "id": "call_KjP2Wjg0x2DNhoNHl53HpEuC",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22SpaAct%22+AND+all:%22curriculum%22&start=0&max_results=5&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "Permission for this action was denied by the Claude Code auto mode classifier. Reason: Stage 2 classifier error - blocking based on stage 1 assessment (usually transient — retrying often succeeds). If you have other tasks that don't depend on this action, continue working on those. IMPORTANT: You *may* attempt to accomplish this action using other tools that might naturally be used to accomplish this goal, e.g. using head instead of cat. But you *should not* attempt to work around this denial in malicious ways, e.g. do not use your ability to run tests to execute non-test actions. You should only try to work around this restriction in reasonable ways that do not attempt to bypass the intent behind this denial. If you believe this capability is essential to complete the user's request, STOP and explain to the user what you were trying to do and why you need this permission. Let the user decide how to proceed. To allow this type of action in the future, the user can add a Bash permission rule to their settings."
+          },
+          {
+            "id": "call_R6OIAMiWLXtxZOyzAvCLfEn4",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22navigation%22+AND+all:%22curriculum%22+AND+all:%22reinforcement+learning%22+AND+all:%22embodied%22&start=0&max_results=15&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Here are the papers from the arXiv query on navigation, curriculum, reinforcement learning, and embodied systems:\n\n1. **Title:** \"Modernising Reinforcement Learning-Based Navigation for Embodied Semantic Scene Graph Generation\"\n   - **arXiv ID:** 2603.25415v2\n   - **Submitted:** 2026-03-26\n\n2. **Title:** \"FLUX: Accelerating Cross-Embodiment Generative Navigation Policies via Rectified Flow and Static-to-Dynamic Learning\"\n   - **arXiv ID:** 2603.12806v1\n   - **Submitted:** 2026-03-13\n\n3. **Title:** \"Curriculum-Based Multi-Tier Semantic Exploration via Deep Reinforcement Learning\"\n   - **arXiv ID:** 2509.09356v1\n   - **Submitted:** 2025-09-11\n\n4. **Title:** \"HASARD: A Benchmark for Vision-Based Safe Reinforcement Learning in Embodied Agents\"\n   - **arXiv ID:** 2503.08241v1\n   - **Submitted:** 2025-03-11\n\n5. **Title:** \"Towards Disturbance-Free Visual Mobile Manipulation\"\n   - **arXiv ID:** 2112.12612v3\n   - **Submitted:** 2021-12-17\n\n6. **Title:** \"Embodied Visual Navigation with Automatic Curriculum Learning in Real Environments\"\n   - **arXiv ID:** 2009.05429v2\n   - **Submitted:** 2020-09-11"
+          },
+          {
+            "id": "call_1JsKboXlAH0UxLGNJX6Nwx7r",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22vision-and-language+navigation%22+AND+all:%22RL%22+AND+all:%22high-level%22+AND+all:%22low-level%22&start=0&max_results=15&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "The feed contains no papers. Key indicators:\n\n- `<opensearch:totalResults>0</opensearch:totalResults>`\n- No `<entry>` elements present in the feed\n\nSo there are no paper titles, arXiv IDs, or submission dates to list."
+          },
+          {
+            "id": "call_3scGrliLcNlURkpS18iIbGU7",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22VLN-R1%22+OR+all:%22ActiveVLN%22+OR+all:%22Think+Hierarchically%22&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Here are the three papers from the arXiv query:\n\n**1. ActiveVLN: Towards Active Exploration via Multi-Turn RL in Vision-and-Language Navigation**\n- arXiv ID: 2509.12618v1\n- Submitted: 2025-09-16\n\n**2. VLN-R1: Vision-Language Navigation via Reinforcement Fine-Tuning**\n- arXiv ID: 2506.17221v2\n- Submitted: 2025-06-20\n\n**3. Think Hierarchically, Act Dynamically: Hierarchical Multi-modal Fusion and Reasoning for Vision-and-Language Navigation**\n- arXiv ID: 2504.16516v2\n- Submitted: 2025-04-23"
+          },
+          {
+            "id": "call_YjjPyRPC6SZ23CCZ5GTeTsnG",
+            "name": "WebFetch",
+            "input": {
+              "url": "http://export.arxiv.org/api/query?search_query=all:%22options+framework%22+AND+all:%22vision%22+AND+all:%22language%22&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
+              "prompt": "List all paper titles, arXiv IDs, and submission dates"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "**Paper Titles, arXiv IDs, and Submission Dates:**\n\n1. **Title:** DEAS: DEtached value learning with Action Sequence for Scalable Offline RL\n   - **arXiv ID:** 2510.07730v1\n   - **Submission Date:** 2025-10-09"
+          }
+        ],
+        "asyncStatus": "running",
+        "agentId": "a2e0ad454b0887247",
+        "result": "Async agent launched successfully.\nagentId: a2e0ad454b0887247 (internal ID - do not mention to user. Use SendMessage with to: 'a2e0ad454b0887247' to continue this agent.)\nThe agent is working in the background. You will be notified automatically when it completes.\nDo not duplicate this agent's work — avoid working with the same files or topics it is using. Work on non-overlapping tasks, or briefly tell the user what you launched and end your response.\noutput_file: C:\\Users\\28208\\AppData\\Local\\Temp\\claude\\C--Users-28208-Documents-Obsidian-Vault\\44bb591b-ba36-4c12-952d-426bb135583d\\tasks\\a2e0ad454b0887247.output\nDo NOT Read or tail this file via the shell tool — it is the full subagent JSONL transcript and reading it will overflow your context. If the user asks for progress, say the agent is still running; you'll get a completion notification."
+      },
+      "call_function_l9vkazyhhhes_3": {
+        "id": "call_function_l9vkazyhhhes_3",
+        "description": "扫描VLM-as-Judge在VLN中的竞争工作",
+        "prompt": "在 2024-2026 年间，搜索 Vision-and-Language Navigation (VLN) 领域是否已有**多模态可验证奖励（Multimodal Verifiable Reward）或 VLM-as-Judge** 的相关工作。\n\n已知 baseline：\n- ActiveVLN (arXiv:2509.12618, 2025-09) - 仅 final success 奖励，稀疏\n- VLN-R1 (arXiv:2506.17221, 2025-06) - TDR (Time-Decayed Reward)，仍是 0/1 hard\n- DeepSeek-R1 / Vision-R1 (2025) - 在 LLM/VLM 上证明 RLVR 有效\n\n请通过 Google Scholar / arXiv / Semantic Scholar 搜索，验证以下问题：\n1. 2024-2026 是否有任何工作用 **VLM (Qwen2-VL, GPT-4V) 自动评估** agent 是否完成 VLN 子目标（如\"经过 brown couch\"）？\n2. 2024-2026 是否有任何工作将 **Process Reward Model (PRM)** 应用于 embodied navigation？\n3. 2024-2026 是否有 **\"sub-goal reward\" / \"landmark reward\" / \"VLM-as-judge\"** for VLN 的工作？\n\n输出要求（500 字以内）：\n- 列出找到的相关工作（标题、arXiv ID、机构、核心 idea）\n- 评估\"方向 B：多模态可验证奖励\"在 2026 年还有多少创新空间\n- 给出 1-2 句结论：这个方向会不会撞车？是 \"安全区\" 还是 \"红海\"？\n\n使用 WebSearch 工具（建议 5-8 次搜索），不需 fetch 全文。仅返回关键发现。",
+        "mode": "async",
+        "isExpanded": false,
+        "status": "running",
+        "toolCalls": [
+          {
+            "id": "call_function_n39vw1o9ycej_1",
+            "name": "WebSearch",
+            "input": {
+              "query": "Vision-Language Navigation VLM-as-judge reward model 2025"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"Vision-Language Navigation VLM-as-judge reward model 2025\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_function_n39vw1o9ycej_2",
+            "name": "WebSearch",
+            "input": {
+              "query": "VLN process reward model PRM embodied navigation 2024 2025"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"VLN process reward model PRM embodied navigation 2024 2025\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_function_n39vw1o9ycej_3",
+            "name": "WebSearch",
+            "input": {
+              "query": "sub-goal reward landmark reward vision language navigation reinforcement learning"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"sub-goal reward landmark reward vision language navigation reinforcement learning\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_function_n39vw1o9ycej_4",
+            "name": "WebSearch",
+            "input": {
+              "query": "Qwen2-VL GPT-4V evaluate navigation trajectory sub-goal 2025"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"Qwen2-VL GPT-4V evaluate navigation trajectory sub-goal 2025\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_function_d7vu9oygtzmu_1",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/abs/2509.12618",
+              "prompt": "Extract title, authors, affiliations, key idea, and reward design of this paper"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "**Title:** ActiveVLN: Towards Active Exploration via Multi-Turn RL in Vision-and-Language Navigation\n\n**Authors:** Zekai Zhang, Weiye Zhu, Hewei Pan, Xiangchen Wang, Rongtao Xu, Xing Sun, Feng Zheng\n\n**Affiliations:** Not specified in the page content.\n\n**Key Idea:** Existing MLLM-based VLN methods rely on imitation learning and DAgger post-training, which are costly and limit diverse route discovery. The authors propose ActiveVLN, a two-stage framework: (1) a small fraction of expert trajectories bootstraps the agent via IL, and (2) the agent iteratively predicts and executes actions, automatically collects diverse trajectories, and optimizes multiple rollouts via the GRPO objective. A dynamic early-stopping strategy prunes long-tail or likely-failed trajectories to improve RL efficiency.\n\n**Reward Design:** Not detailed on the page; the abstract mentions GRPO-based optimization across multiple rollouts and a dynamic early-stopping strategy, but specific reward shaping details are not provided in the available content."
+          },
+          {
+            "id": "call_function_d7vu9oygtzmu_2",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/abs/2506.17221",
+              "prompt": "Extract title, authors, affiliations, key idea, and reward design of this paper"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "**Title:** VLN-R1: Vision-Language Navigation via Reinforcement Fine-Tuning\n\n**Authors:** Zhangyang Qi, Zhixiong Zhang, Yizhou Yu, Jiaqi Wang, Hengshuang Zhao\n\n**Affiliations:** Not explicitly listed on the page (only arXiv author search links are provided).\n\n**Key Idea:** The paper proposes an end-to-end framework, VLN-R1, that uses a Large Vision-Language Model (LVLM) to translate egocentric video streams directly into continuous navigation actions, removing the dependence on discrete topological graphs used by prior language-model-based VLN systems. Training follows a two-stage approach: (1) Supervised Fine-Tuning (SFT) to align action-sequence predictions with expert demonstrations, and (2) Reinforcement Fine-Tuning (RFT) using GRPO (inspired by DeepSeek-R1). To support training, the authors construct the VLN-Ego dataset via the Habitat 3D simulator and introduce Long-Short Memory Sampling to balance historical and current visual observations.\n\n**Reward Design:** A Time-Decayed Reward (TDR) mechanism is used during reinforcement fine-tuning to strategically weight multi-step future actions, emphasizing nearer-term actions over distant ones."
+          },
+          {
+            "id": "call_function_d7vu9oygtzmu_3",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?query=VLN+verifiable+reward&searchtype=all&start=0",
+              "prompt": "Find any arXiv papers on vision-language navigation with VLM-as-judge, process reward, or sub-goal reward. Return title, arXiv ID, date, authors."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "# arXiv Search Results: VLN with Verifiable Reward\n\n## 1. SeeNav-Agent: Enhancing Vision-Language Navigation with Visual Prompt and Step-Level Policy Optimization\n\n- **arXiv ID:** 2512.02631\n- **Date:** Submitted 2 December, 2025; originally announced December 2025\n- **Authors:** Zhengcheng Wang, Zichuan Lin, Yijun Yang, Haobo Fu, Deheng Ye\n- **PDF:** https://arxiv.org/pdf/2512.02631\n\n### Summary\n\nThe paper introduces **SeeNav-Agent**, a framework for Vision-Language Navigation (VLN) that addresses perception, reasoning, and planning errors in Large Vision-Language Model (LVLM) based agents. Two main contributions are:\n\n1. **Dual-view Visual Prompt (VP)** — Reduces visual hallucinations and improves spatial state understanding. With this zero-shot module, GPT-4.1 achieves an 86.7% navigation success rate on EmbodiedBench Navigation, surpassing the prior best LVLM by ~20 percentage points.\n\n2. **Step Reward Group Policy Optimization (SRGPO)** — A step-level Reinforcement Fine-Tuning method that defines \"verifiable process rewards for the navigation task\" and uses randomized step grouping for efficient advantage estimation. Applied to Qwen2.5-VL-3B, it yields a 72.3% success rate (5.6 pp above the best existing LVLM), with improved training stability, convergence, and generalization over GRPO and GiGPO.\n\n### Relevance to Query\n\nThe paper directly addresses **process reward** in VLN (verifiable step-level rewards) and **sub-goal/step-level reward modeling** via SRGPO. It does not use a VLM-as-judge paradigm; rewards are verifiable from the environment/ground truth rather than model-evaluated.\n\n---\n\n*Note: The search returned only 1 result matching \"VLN verifiable reward\" on arXiv. If you broaden the search (e.g., remove \"verifiable\" or search \"VLN process reward\" / \"VLN sub-goal reward\" separately), additional papers may surface. Let me know if you'd like me to summarize or query those.*"
+          },
+          {
+            "id": "call_function_d7vu9oygtzmu_4",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?query=navigation+process+reward+model&searchtype=all&start=0",
+              "prompt": "Find any arXiv papers on embodied navigation process reward model. Return title, arXiv ID, date, authors."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Below are arXiv papers from the search results that relate to embodied navigation combined with process reward models (PRMs) or process-level supervision for navigation tasks:\n\n**1. SWE-Shepherd: Advancing PRMs for Reinforcing Code Agents**\n- arXiv ID: 2604.10493\n- Date: April 12, 2026\n- Authors: Mahir Labib Dihan, Md Ashrafur Rahman Khan\n\n**2. AgentPRM: Process Reward Models for LLM Agents via Step-Wise Promise and Progress**\n- arXiv ID: 2511.08325\n- Date: November 11, 2025\n- Authors: Zhiheng Xi, Chenyang Liao, Guanyu Li, Yajie Yang, Wenxiang Chen, Zhihao Zhang, Binghai Wang, Senjie Jin, Yuhao Zhou, Jian Guan, Wei Wu, Tao Ji, Tao Gui, Qi Zhang, Xuanjing Huang\n\n**3. WebArbiter: A Principle-Guided Reasoning Process Reward Model for Web Agents**\n- arXiv ID: 2601.21872\n- Date: January 29, 2026\n- Authors: Yao Zhang, Shijie Tang, Zeyu Li, Zhen Han, Volker Tresp\n\n**4. SeeNav-Agent: Enhancing Vision-Language Navigation with Visual Prompt and Step-Level Policy Optimization**\n- arXiv ID: 2512.02631\n- Date: December 2, 2025\n- Authors: Zhengcheng Wang, Zichuan Lin, Yijun Yang, Haobo Fu, Deheng Ye\n\n**5. SAT: Balancing Reasoning Accuracy and Efficiency with Stepwise Adaptive Thinking**\n- arXiv ID: 2604.07922\n- Date: April 9, 2026\n- Authors: Weiyang Huang, Xuefeng Bai, Kehai Chen, Xinyang Chen, Yibin Chen, Weili Guan, Min Zhang\n\n**6. AirDreamer: Generalist Drone Navigation with World Models**\n- arXiv ID: 2606.03252\n- Date: June 2, 2026\n- Authors: Zian Liu, Andong Yang, Chunkai Yang, Ruidong An, Chao Gao, Guyue Zhou\n\n**7. Explore with Long-term Memory: A Benchmark and Multimodal LLM-based Reinforcement Learning Framework for Embodied Exploration (MemoryExplorer)**\n- arXiv ID: 2601.10744\n- Date: January 11, 2026\n- Authors: Sen Wang, Bangwei Liu, Zhenkun Gao, Lizhuang Ma, Xuhong Wang, Yuan Xie, Xin Tan\n\n**8. Adaptive Milestone Reward for GUI Agents (ADMIRE)**\n- arXiv ID: 2602.11524\n- Date: February 11, 2026\n- Authors: Congmin Zheng, Xiaoyun Mo, Xinbei Ma, Qiqiang Lin, Yin Zhao, Jiachen Zhu, Xingyu Lou, Jun Wang, Zhaoxiang Wang, Weiwen Liu, Zhuosheng Zhang, Yong Yu, Weinan Zhang\n\n**9. R&B-EnCoRe: Self-Supervised Bootstrapping of Action-Predictive Embodied Reasoning**\n- arXiv ID: 2602.08167\n- Date: February 8, 2026\n- Authors: Milan Ganai, Katie Luo, Jonas Frey, Clark Barrett, Marco Pavone\n\n**10. Action-Conditioned Risk Gating for Safety-Critical Control under Partial Observability**\n- arXiv ID: 2605.14246\n- Date: May 13, 2026\n- Authors: Yushen Liu, Yin-Jen Chen, Ziyi Chen, Tao Wang, Heng Huang, Xugui Zhou, Yanfu Zhang\n\n**11. Context, Reasoning, and Hierarchy: A Cost-Performance Study of Compound LLM Agent Design in an Adversarial POMDP**\n- arXiv ID: 2605.16205\n- Date: May 15, 2026\n- Authors: Igor Bogdanov, Chung-Horng Lung, Thomas Kunz, Jie Gao, Adrian Taylor, Marzia Zaman\n\n**12. CharacterFlywheel: Scaling Iterative Improvement of Engaging and Steerable LLMs in Production**\n- arXiv ID: 2603.01973\n- Date: March 2, 2026\n- Authors: Yixin Nie, Lin Guan, Zhongyao Ma, Anchit Gupta, Yipin Zhou, Xiao Li, Zhengping Zhou, Raymond Zeng, Gelin Zhou, Shigan Chu, Ajay Thampi, Wancen Mu, Nathan Shuster, Ketong Wang, Lin Chen, Jason Brewer, Derek Hao Hu, Alexander McCauley, Jason Weston, Sem Park, Na Zhang, Kevin Tang\n\n**13. LongVideo-R1: Smart Navigation for Low-cost Long Video Understanding**\n- arXiv ID: 2602.20913\n- Date: February 24, 2026\n- Authors: Jihao Qiu, Lingxi Xie, Xinyue Huo, Qi Tian, Qixiang Ye\n\n**14. EEA: Exploration-Exploitation Agent for Long Video Understanding**\n- arXiv ID: 2512.03500\n- Date: December 3, 2025\n- Authors: Te Yang, Xiangyu Zhu, Bo Wang, Quan Chen, Peng Jiang, Zhen Lei\n\n**15. LASER: Learning Active Sensing for Continuum Field Reconstruction**\n- arXiv ID: 2604.19355\n- Date: April 21, 2026\n- Authors: Huayu Deng, Jinghui Zhong, Xiangming Zhu, Yunbo Wang, Xiaokang Yang\n\n**16. SOLAR-RL: Semi-Online Long-horizon Assignment Reinforcement Learning**\n- arXiv ID: 2604.22558\n- Date: April 24, 2026\n- Authors: Jichao Wang, Liuyang Bian, Yufeng Zhou, Han Xiao, Yue Pan, Guozhi Wang, Hao Wang, Zhaoxiong Wang, Yafei Wen, Xiaoxin Chen, Shuai Ren, Lingfang Zeng\n\n**17. Goldilocks RL: Tuning Task Difficulty to Escape Sparse Rewards for Reasoning**\n- arXiv ID: 2602.14868\n- Date: February 16, 2026\n- Authors: Ilia Mahrooghi, Aryo Lotfi, Emmanuel Abbe\n\n**18. Amortized Reasoning Tree Search: Decoupling Proposal and Decision in Large Language Models**\n- arXiv ID: 2602.12846\n- Date: February 13, 2026\n- Authors: Zesheng Hong, Jiadong Yu, Hui Pan\n\n**19. Neuro-Symbolic Injection of LTLf Constraints in Autoregressive Reinforcement Learning Policies**\n- arXiv ID: 2606.08312\n- Date: June 6, 2026\n- Authors: Ashkan Ansarifard, Matteo Mancanelli, Elena Umili, Fabio Patrizi\n\n**20. CSPO: Constraint-Sensitive Policy Optimization for Safe Reinforcement Learning**\n- arXiv ID: 2606.14415\n- Date: June 12, 2026\n- Authors: Ayoub Belouadah, Sylvain Kubler, Yves Le Traon\n\n**21. SliceGraph: Mapping Process Isomers in Multi-Run Chain-of-Thought Reasoning**\n- arXiv ID: 2605.14619\n- Date: May 14, 2026\n- Authors: Kang Chen, Junjie Nian, Yixin Cao, Yugang Jiang\n\n**22. TraceGraph: Shared Decision Landscapes for Diagnosing and Improving Agent Trajectories**\n- arXiv ID: 2605.31308\n- Date: May 29, 2026\n- Authors: Junjie Nian, Kang Chen, Ge Zhang, Yixin Cao, Yugang Jiang\n\n**23. VISA: Value Injection via Shielded Adaptation for Personalized LLM Alignment**\n- arXiv ID: 2603.04822\n- Date: March 5, 2026\n- Authors: Jiawei Chen, Tianzhuo Yang, Guoxi Zhang, Jiaming Ji, Yaodong Yang, Juntao Dai\n\n**24. Beyond Hard Constraints: Budget-Conditioned Reachability For Safe Offline Reinforcement Learning**\n- arXiv ID: 2603.22292\n- Date: March 8, 2026\n- Authors: Janaka Chathuranga Brahmanage, Akshat Kumar\n\n**25. AegisTS: A Hierarchical Agent System with Reinforcement Learning for Multivariate Time Series Data Cleaning**\n- arXiv ID: 2605.04902\n- Date: May 6, 2026\n- Authors: Yuhan Shi, Yuanyuan Yao, Lu Chen, Mourad Khayati, Tianyi Li\n\n**26. SCASRec: A Self-Correcting and Auto-Stopping Model for Generative Route List Recommendation**\n- arXiv ID: 2602.03324\n- Date: February 3, 2026\n- Authors: Chao Chen, Longfei Xu, Daohan Su, Tengfei Liu, Hanyu Guo, Yihai Duan, Kaikui Liu, Xiangxiang Chu\n\n**27. Flow-based Extremal Mathematical Structure Discovery (FlowBoost)**\n- arXiv ID: 2601.18005\n- Date: January 25, 2026\n- Authors: Gergely Bérczi, Baran Hashemi, Jonas Klüver\n\n**28. Deep GraphRAG: A Balanced Approach to Hierarchical Retrieval and Adaptive Integration**\n- arXiv ID: 2601.11144\n- Date: January 16, 2026\n- Authors: Yuejie Li, Ke Yang, Tao Wang, Bolin Chen, Bowen Li, Chengjun Mao\n\n**29. From User Interface to Agent Interface: Efficiency Optimization of UI Representations for LLM Agents (UIFormer)**\n- arXiv ID: 2512.13438\n- Date: December 15, 2025\n- Authors: Dezhi Ran, Zhi Gong, Yuzhe Guo, Mengzhou Wu, Yuan Cao, Haochuan Lu, Hengyu Zhang, Xia Zeng, Gang Cao, Liangchao Yao, Yuetang Deng, Wei Yang, Tao Xie\n\n**30. MedEyes: Learning Dynamic Visual Focus for Medical Progressive Diagnosis**\n- arXiv ID: 2511.22018\n- Date: November 26, 2025\n- Authors: Chunzheng Zhu, Yangfang Lin, Shen Chen, Yijun Wang, Jianxin Lin\n\n**31. ALDEN: Reinforcement Learning for Active Navigation and Evidence Gathering in Long Documents**\n- arXiv ID: 2510.25668\n- Date: October 29, 2025\n- Authors: Tianyu Yang, Terry Ruas, Yijun Tian, Jan Philip Wahle, Daniel Kurzawe, Bela Gipp\n\n**32. Dynamic Generation of Multi-LLM Agents Communication Topologies with Graph Diffusion Models**\n- arXiv ID: 2510.07799\n- Date: October 9, 2025\n- Authors: Eric Hanchen Jiang, Mengting Li, Guancheng Wan, Sophia Yin, Yuchen Wu, Xiao Liang, Xinfeng Li, Yizhou Sun, Wei Wang, Kai-Wei Chang, Ying Nian Wu\n\n**33. From Static to Dynamic: Adaptive Monte Carlo Search for Mathematical Process Supervision**\n- arXiv ID: 2509.24351\n- Date: (truncated in source)\n- Authors: Jie Ma, Shihao Qi, Rui Xing, Ziang Yin, Bifan Wei, Jun Liu, Tongliang Liu\n\n**34. Aligning Deep Implicit Preferences by Learning to Reason Defensively (CDRA / Pers-GenPRM)**\n- arXiv ID: 2510.11194\n- Date: October 13, 2025\n- Authors: Peiming Li, Zhiyuan Hu, Yang Tang, Shiyu Li, Xi Chen\n\n**35. MAT-Agent: Adaptive Multi-Agent Training Optimization**\n- arXiv ID: 2510.17845\n- Date: October 10, 2025\n- Authors: Jusheng Zhang, Kaitong Cai, Yijia Fan, Ningyuan Liu, Keze Wang\n\n**36. Simultaneous learning of state-to-state minimum-time planning and control**\n- arXiv ID: 2510.20008\n- Date: October 22, 2025\n- Authors: Swati Dantu, Robert Pěnička, Martin Saska\n\n**37. Exploratory Experience Shapes the Geometry of Predictive Representations**\n- arXiv ID: 2605.27929\n- Date: May 27, 2026\n- Authors: Kseniia Shilova, Abdelrahman Sharafeldin, Advay Balakrishnan, Hannah Choi\n\n**38. Administrative Law's Fourth Settlement: AI and the Capability-Accountability Trap**\n- arXiv ID: 2602.09678\n- Date: February 10, 2026\n- Authors: Nicholas Caputo\n\n*Note: Paper 38 is included only because the source mentions the term \"process\" in context; it is not an embodied navigation PRM paper. The list is ordered approximately from most directly relevant to least directly relevant to embodied navigation combined with process reward modeling.*"
+          },
+          {
+            "id": "call_function_emgy2jmzbr5l_1",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/abs/2512.02631",
+              "prompt": "Extract SeeNav-Agent's step-level reward design, how \"verifiable process rewards\" are defined, and whether it uses VLM-as-judge or environment ground truth."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "## SeeNav-Agent: Step-Level Reward Design\n\n**Framework name:** Step Reward Group Policy Optimization (SRGPO)\n\n**Process rewards:**\nThe abstract states only that the method \"define[s] verifiable process rewards for the navigation task,\" without specifying the individual reward components. The paper itself (not provided) would contain the detailed definitions.\n\n**Step-level advantage estimation:**\nPerformed \"by randomly grouping different navigation steps,\" which provides dense reward signals during reinforcement learning.\n\n**Reward source:**\nThe page does not specify whether rewards come from a VLM-as-judge or environment ground truth. It only describes the rewards as \"verifiable,\" which implies automated checkability against task outcomes rather than subjective model judgment — but this is an inference beyond the abstract.\n\n**Intended effect:**\nDense process rewards and step-level grouping are claimed to improve planning capability, training stability, convergence efficiency, and generalization compared to GRPO and GiGPO.\n\n**Note:** The exact process-reward formulation, reward terms, and grounding mechanism (VLM-as-judge vs. environment) are not extractable from the abstract page alone; the 12-page PDF would be required for those details."
+          },
+          {
+            "id": "call_function_emgy2jmzbr5l_2",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?query=VLN+milestone+reward&searchtype=all&start=0",
+              "prompt": "Find any arXiv papers on Vision-Language Navigation milestone reward, sub-goal, or landmark reward. Return title, arXiv ID, date."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "The arXiv search results indicate that no papers were found matching the query \"VLN milestone reward\" across all fields. The page explicitly states:\n\n\"Sorry, your query for all: VLN milestone reward produced no results.\"\n\nNo titles, arXiv IDs, or dates for papers on Vision-Language Navigation milestone reward, sub-goal, or landmark reward are available in the provided content.\n\nIf you'd like, I can suggest alternative search strategies:\n- Try individual terms like \"Vision-Language Navigation,\" \"sub-goal reward,\" or \"landmark reward\" separately\n- Use related acronyms such as \"VLN\" with broader terms\n- Search within specific fields (e.g., Abstract or Title) rather than All fields\n\nWould you like me to help formulate alternative search queries?"
+          },
+          {
+            "id": "call_function_emgy2jmzbr5l_3",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?query=navigation+landmark+reward+RL&searchtype=all&start=0",
+              "prompt": "Find any arXiv papers on embodied AI using VLM-as-judge for evaluating navigation or trajectory. Return title, arXiv ID, date."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "The provided web page shows only an arXiv search result page indicating that the query \"navigation landmark reward RL\" produced no results. The page does not list any papers on embodied AI using VLM-as-judge for evaluating navigation or trajectory. No titles, arXiv IDs, or dates can be extracted from this content."
+          },
+          {
+            "id": "call_function_emgy2jmzbr5l_4",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?query=embodied+navigation+visual+grounding+reward&searchtype=all&start=0",
+              "prompt": "Find recent arXiv papers (2024-2026) on R2R, REVERIE, RxR, or VLN-CE that use dense reward shaping or step-level supervision. Return title, arXiv ID, date."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Based on the search results, here are the recent (2024-2026) papers that appear relevant to VLN-style benchmarks with reward-based or step-level supervision:\n\n1. **AtlasVA: Self-Evolving Visual Skill Memory for Teacher-Free VLM Agents**\n   - arXiv: 2605.17933\n   - Date: May 2026\n\n2. **GrndCtrl: Grounding World Models via Self-Supervised Reward Alignment**\n   - arXiv: 2512.01952\n   - Date: December 2025 (v1)\n\n3. **Grounding Video Models to Actions through Goal Conditioned Exploration**\n   - arXiv: 2411.07223\n   - Date: November 2024\n\n**Notes on specific benchmarks (R2R, REVERIE, RxR, VLN-CE):**\n- None of the 7 results explicitly mention these specific datasets in the abstracts shown.\n- AtlasVA mentions \"3D embodied navigation\" generally; GrndCtrl focuses on outdoor navigation; the Video-to-Action paper covers \"iThor Visual Navigation\" (not R2R/REVERIE/RxR/VLN-CE specifically).\n- The only R2R-adjacent work in the list is #6 (RCM, 2018) and #7 (GFT, 2018), but these fall outside the 2024-2026 window.\n\nThe most relevant matches to your criteria (dense reward shaping + step-level supervision, 2024-2026) are the three papers above, though none explicitly target the named VLN benchmarks."
+          },
+          {
+            "id": "call_function_u4mq88c8n1kf_1",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?query=VLN+GRPO+reward&searchtype=all&start=0",
+              "prompt": "Find arXiv papers (2024-2026) on Vision-Language Navigation with GRPO, RLVR, RFT, or dense reward shaping. Return title, arXiv ID, date, authors."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "# arXiv Papers on VLN with GRPO/RLVR/RFT/Dense Reward\n\n**1. Let's Reward Step-by-Step: Step-Aware Contrastive Alignment for Vision-Language Navigation in Continuous Environments**\n- arXiv ID: 2603.09740\n- Date: March 10, 2026\n- Authors: Haoyuan Li, Rui Liu, Hehe Fan, Yi Yang\n- Focus: Addresses sparse outcome rewards in GRPO-based RFT via Step-Aware Contrastive Alignment (SACA) with a Perception-Grounded Step-Aware auditor providing dense step-level supervision.\n\n**2. SeeNav-Agent: Enhancing Vision-Language Navigation with Visual Prompt and Step-Level Policy Optimization**\n- arXiv ID: 2512.02631\n- Date: December 2, 2025\n- Authors: Zhengcheng Wang, Zichuan Lin, Yijun Yang, Haobo Fu, Deheng Ye\n- Focus: Introduces Step Reward Group Policy Optimization (SRGPO) with verifiable process rewards for step-level advantage estimation, improving training stability over standard GRPO.\n\n**3. ActiveVLN: Towards Active Exploration via Multi-Turn RL in Vision-and-Language Navigation**\n- arXiv ID: 2509.12618\n- Date: September 15, 2025\n- Authors: Zekai Zhang, Weiye Zhu, Hewei Pan, Xiangchen Wang, Rongtao Xu, Xing Sun, Feng Zheng\n- Focus: Multi-turn RL framework optimizing rollouts via the GRPO objective with dynamic early-stopping to prune long-tail trajectories and improve RL efficiency.\n\n**4. VLN-R1: Vision-Language Navigation via Reinforcement Fine-Tuning**\n- arXiv ID: 2506.17221\n- Date: June 20, 2025\n- Authors: Zhangyang Qi, Zhixiong Zhang, Yizhou Yu, Jiaqi Wang, Hengshuang Zhao\n- Focus: Two-stage SFT + RFT approach using GRPO training inspired by DeepSeek-R1, with a Time-Decayed Reward (TDR) mechanism that weights multi-step future actions.\n\n**5. OctoNav: Towards Generalist Embodied Navigation**\n- arXiv ID: 2506.09839\n- Date: June 11, 2025\n- Authors: Chen Gao, Liankai Jin, Xingyu Peng, Jiazhao Zhang, Yue Deng, Annan Li, He Wang, Si Liu\n- Focus: Hybrid Training Paradigm featuring a \"Nav-GRPO\" stage with learning policies and rewards tailored to navigation, alongside TBA-SFT and Online RL stages.\n\n**6. FlightGPT: Towards Generalizable and Interpretable UAV Vision-and-Language Navigation with Vision-Language Models**\n- arXiv ID: 2505.12835\n- Date: May 19, 2025\n- Authors: Hengxing Cai, Jinhan Dong, Jingjun Tan, Jingcheng Deng, Sihang Li, Zhifeng Gao, Haidong Wang, Zicheng Su, Agachai Sumalee, Renxin Zhong\n- Focus: Two-stage pipeline (SFT then GRPO) guided by a composite reward considering goal accuracy, reasoning quality, and format compliance."
+          },
+          {
+            "id": "call_function_u4mq88c8n1kf_2",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?query=VLM+judge+embodied+agent+reward&searchtype=all&start=0",
+              "prompt": "Find arXiv papers on using VLM or MLLM as a judge/reward model for embodied agents or navigation. Return title, arXiv ID, date."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Based on the content provided, the arXiv search results show:\n\n**\"Sorry, your query for all: VLM judge embodied agent reward produced no results.\"**\n\nThe page does not contain any actual paper listings, titles, arXiv IDs, or dates. It only displays a no-results message for the search query \"VLM judge embodied agent reward\" along with general search tips and help documentation for using arXiv.\n\nI cannot return specific paper titles, arXiv IDs, or dates because no such papers appear in the content you provided. The search yielded zero results, and no paper metadata is present in the page content."
+          },
+          {
+            "id": "call_function_u4mq88c8n1kf_3",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?query=Vision-R1+RLVR&searchtype=all&start=0",
+              "prompt": "Find arXiv papers on Vision-R1, VL-Rethinker, or visual reasoning RL with verifiable rewards. Return title, arXiv ID, date, authors."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Here are arXiv papers on Vision-R1 and visual reasoning with RLVR (Reinforcement Learning with Verifiable Rewards):\n\n**1. SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models**\n- arXiv ID: 2604.20705\n- Date: Submitted 22 April, 2026\n- Authors: Jiahao Xie, Alessio Tonioni, Nathalie Rauschmayr, Federico Tombari, Bernt Schiele\n\n**2. Fundus-R1: Training a Fundus-Reading MLLM with Knowledge-Aware Reasoning on Public Data**\n- arXiv ID: 2604.08322\n- Date: Submitted 9 April, 2026\n- Authors: Yuchuan Deng, Qijie Wei, Kaiheng Qian, Jiazhen Liu, Zijie Xin, Bangxiang Lan, Jingyu Liu, Jianfeng Dong, Xirong Li\n\n**3. VLA-R1: Enhancing Reasoning in Vision-Language-Action Models**\n- arXiv ID: 2510.01623\n- Date: Submitted 1 October, 2025\n- Authors: Angen Ye, Zeyu Zhang, Boyuan Wang, Xiaofeng Wang, Dapeng Zhang, Zheng Zhu\n\n**4. ReWatch-R1: Boosting Complex Video Reasoning in Large Vision-Language Models through Agentic Data Synthesis**\n- arXiv ID: 2509.23652\n- Date: v1 submitted 28 September, 2025\n- Authors: Congzhi Zhang, Zhibin Wang, Yinchao Ma, Jiawei Peng, Yihan Wang, Qiang Zhou, Jun Song, Bo Zheng\n\n**5. ManipLVM-R1: Reinforcement Learning for Reasoning in Embodied Manipulation with Large Vision-Language Models**\n- arXiv ID: 2505.16517\n- Date: v1 submitted 22 May, 2025\n- Authors: Zirui Song, Guangxian Ouyang, Mingzhe Li, Yuheng Ji, Chenxi Wang, Zixiang Xu, Zeyu Zhang, Xiaoqing Zhang, Qian Jiang, Zhenhao Chen, Zhongzhi Li, Rui Yan, Xiuying Chen\n\nThe search did not return a paper specifically titled \"Vision-R1\" or \"VL-Rethinker,\" but the five results above all apply RLVR techniques to visual reasoning tasks across different domains (general MLLMs, medical imaging, robotics, video understanding, and manipulation)."
+          },
+          {
+            "id": "call_function_u4mq88c8n1kf_4",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://www.semanticscholar.org/search?q=VLN+sub-goal+reward+RL&sort=relevance",
+              "prompt": "Find arXiv papers on Vision-Language Navigation with RAGEN, GoR, GiGPO, or any landmark-based or sub-goal reward. Return title, arXiv ID, date."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "I cannot find any arXiv papers on the topics you mentioned (Vision-Language Navigation with RAGEN, GoR, GiGPO, or landmark-based/sub-goal reward methods) in the provided web page content. The page only shows a Semantic Scholar header with navigation elements and a \"Loading results\" indicator, but no actual search results or paper information is visible."
+          },
+          {
+            "id": "call_function_lxpbt3j9k7gt_1",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/abs/2603.09740",
+              "prompt": "Extract full details: title, authors, affiliations, abstract, reward design (especially how the step auditor works and whether it uses VLM-as-judge or environment ground truth)."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "# Paper Details: arXiv:2603.09740\n\n**Title:** Let's Reward Step-by-Step: Step-Aware Contrastive Alignment for Vision-Language Navigation in Continuous Environments\n\n**Authors:** Haoyuan Li, Rui Liu, Hehe Fan, Yi Yang\n\n**Affiliations:** Not specified on the page (only an email view link for Haoyuan Li is provided).\n\n**Submission:** Submitted 10 Mar 2026; 28 pages, 10 figures.\n\n**Subjects:** Robotics (cs.RO); Computer Vision and Pattern Recognition (cs.CV)\n\n## Abstract\n\nThe paper addresses Vision-Language Navigation in Continuous Environments (VLN-CE), noting that SFT-derived policies suffer from compounding errors and struggle to recover from out-of-distribution states, while RFT methods like GRPO are bottlenecked by sparse outcome rewards where binary feedback \"fails to assign credit to individual steps, leading to gradient signal collapse in failure dominant batches.\"\n\nThe proposed framework, **Step-Aware Contrastive Alignment (SACA)**, is introduced to \"extract dense supervision from imperfect trajectories.\"\n\n## Reward Design / Step Auditor Details\n\nThe page does **not** provide detailed specifications of how the step auditor is implemented (e.g., whether it uses a VLM-as-judge, a learned model, environment ground truth, or a combination). The abstract only describes it at a high level:\n\n- A \"Perception-Grounded Step-Aware auditor evaluates progress step-by-step, disentangling failed trajectories into valid prefixes and exact divergence points.\"\n- A \"Scenario-Conditioned Group Construction mechanism dynamically routes batches to specialized resampling and optimization strategies.\"\n\n## Reported Results\n\nThe abstract states only that \"Extensive experiments on VLN-CE benchmarks demonstrate that SACA achieves state-of-the-art performance\" — no specific metrics, baselines, or benchmark names are given on the page.\n\n## License\n\nCC BY-NC-SA 4.0.\n\n---\n\n**Note:** Specific details about the step auditor's mechanism, architectural choices, training hyperparameters, and benchmark-level results are not extractable from the abstract page; the full PDF/HTML would be needed for that information."
+          },
+          {
+            "id": "call_function_lxpbt3j9k7gt_2",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?query=navigation+grounded+reward+verifiable&searchtype=all&start=0",
+              "prompt": "Find arXiv papers on embodied navigation step-by-step supervision, dense reward from VLM perception, or landmark-anchored reward. Return title, arXiv ID, date, authors."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Based on the search results, several papers address navigation with dense or grounded rewards:\n\n1. **Peak-Then-Collapse and the Four Interface Channels of Knowledge-Graph Tool Use**\n   - arXiv: 2605.26037\n   - Date: May 25, 2026\n   - Authors: Tianda Sun, Dimitar Kazakov\n\n2. **MemGym: a Long-Horizon Memory Environment for LLM Agents**\n   - arXiv: 2605.20833\n   - Date: May 20, 2026\n   - Authors: Wujiang Xu, Yu Wang, Kai Mei, Kaiqu Liang, Zhenting Wang, Mingyu Jin, Han Zhang, Shi-Xiong Zhang, Wenyue Hua, Sambit Sahu, Dimitris N. Metaxas\n\n3. **SceneTeract: Agentic Functional Affordances and VLM Grounding in 3D Scenes**\n   - arXiv: 2603.29798\n   - Date: March 31, 2026\n   - Authors: Léopold Maillard, Francis Engelmann, Tom Durand, Boxiao Pan, Yang You, Or Litany, Leonidas Guibas, Maks Ovsjanikov\n\n4. **Wan-R1: Verifiable-Reinforcement Learning for Video Reasoning**\n   - arXiv: 2603.27866\n   - Date: March 29, 2026\n   - Authors: Ming Liu, Yunbei Zhang, Shilong Liu, Liwen Wang, Wensheng Zhang\n\n5. **Self-Supervised Bootstrapping of Action-Predictive Embodied Reasoning** (R&B-EnCoRe)\n   - arXiv: 2602.08167\n   - Date: February 8, 2026 (v2 May 16, 2026)\n   - Authors: Milan Ganai, Katie Luo, Jonas Frey, Clark Barrett, Marco Pavone\n\n6. **GrndCtrl: Grounding World Models via Self-Supervised Reward Alignment**\n   - arXiv: 2512.01952\n   - Date: December 1, 2025\n   - Authors: Haoyang He, Jay Patrikar, Dong-Ki Kim, Max Smith, Daniel McGann, Ali-akbar Agha-mohammadi, Shayegan Omidshafiei, Sebastian Scherer\n\n**Most relevant matches for your query:**\n\n- **SceneTeract** uses a \"grounded verification engine\" with geometric checks including \"reachability, clearance, and navigability,\" and serves as a \"reward engine for VLM post-training.\"\n- **GrndCtrl** introduces RLWG using \"geometric and perceptual rewards\" including \"pose cycle-consistency, depth reprojection, and temporal coherence\" for \"embodied navigation.\"\n- **R&B-EnCoRe** addresses navigation across \"bipedal, wheeled, bicycle, quadruped\" embodiments via \"self-supervised refinement\" without external rewards.\n- **Wan-R1** uses an \"embedding-level verifiable reward\" for robotic navigation and maze tasks.\n- **Peak-Then-Collapse** studies tool-grounded rewards in knowledge-graph navigation interfaces.\n\nNone of these specifically reference landmark-anchored rewards, but SceneTeract and GrndCtrl most directly combine step-by-step spatial verification with dense reward signals from perceptual/geometric sources."
+          },
+          {
+            "id": "call_function_lxpbt3j9k7gt_3",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?query=process+supervision+embodied+navigation&searchtype=all&start=0",
+              "prompt": "Find arXiv papers on using GPT-4V or Qwen-VL to evaluate/grade trajectory quality for embodied agents. Return title, arXiv ID, date."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Based on the search results provided, I cannot find any papers that specifically evaluate or grade trajectory quality for embodied agents using GPT-4V or Qwen-VL. The search query was \"process supervision embodied navigation,\" which returned papers on related but distinct topics:\n\n- **ADMIRE** (arXiv:2602.11524) addresses reward design for GUI agents, using \"process reward\" as a concept for dense supervision, but does not mention GPT-4V or Qwen-VL for trajectory grading.\n- **CityWalker** (arXiv:2411.17820) trains on web-scale video data, but uses action supervision extracted from videos, not VLM-based trajectory evaluation.\n\nSeveral papers discuss visual language models in navigation contexts (e.g., WPCL uses VLM knowledge for perception; DAAG uses VLM as a reward detector), but none of the listed abstracts describe using GPT-4V or Qwen-VL specifically to evaluate or grade trajectory quality.\n\nIf you're looking for such papers, I'd recommend a more targeted search on arXiv using terms like \"VLM trajectory evaluation,\" \"GPT-4V reward model navigation,\" or \"Qwen-VL embodied agent assessment.\""
+          },
+          {
+            "id": "call_function_lxpbt3j9k7gt_4",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?query=EmbodiedBench+navigation&searchtype=all&start=0",
+              "prompt": "Find arXiv papers on VLN-CE, R2R, REVERIE, RxR with reinforcement learning 2025-2026. Return title, arXiv ID, date."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Based on the search results provided, only 2 papers matched \"EmbodiedBench navigation\" — neither specifically addresses VLN-CE, R2R, REVERIE, or RxR with reinforcement learning as core topics.\n\nThe closest match is:\n\n**SeeNav-Agent: Enhancing Vision-Language Navigation with Visual Prompt and Step-Level Policy Optimization**\n- arXiv ID: 2512.02631\n- Date: Submitted 2 December 2025\n- This paper introduces a step-level Reinforcement Fine-Tuning method (SRGPO) for VLN agents and reports results on the EmbodiedBench Navigation benchmark.\n\nThe second result (arXiv:2502.09560) introduces the EmbodiedBench benchmark itself and evaluates 24 MLLMs but does not focus on VLN-CE/R2R/REVERIE/RxR with RL.\n\nIf you'd like, I can refine the search terms (e.g., \"R2R reinforcement learning\" or \"VLN-CE GRPO\") to surface more targeted results."
+          },
+          {
+            "id": "call_function_n81zda4wow85_1",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?query=DAAG+VLN+VLM&searchtype=all&start=0",
+              "prompt": "Find arXiv papers (2024-2026) on DAAG, VLM-as-detector, or VLM-as-reward for navigation. Return title, arXiv ID, date."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Based on the web page content, the arXiv search for \"DAAG VLN VLM\" in All fields **returned no results**:\n\n> \"Sorry, your query for all: DAAG VLN VLM produced no results.\"\n\nSince the page contains no actual paper listings, I cannot provide any titles, arXiv IDs, or dates for papers on DAAG, VLM-as-detector, or VLM-as-reward for navigation. The page only contains general search help text and tips for refining queries (e.g., using wildcards, phrases in quotes, or the Author(s) field).\n\nTo find the papers you're looking for, I'd suggest:\n- Trying the [Advanced Search](https://arxiv.org/search/advanced) with separate terms\n- Using wildcards (e.g., `*VLM*`) if appropriate\n- Searching individual terms like \"DAAG\", \"VLM\", \"VLN\" separately\n- Restricting to specific date ranges (2024-2026)\n\nWould you like me to suggest specific search strategies based on the search tips shown on the page?"
+          },
+          {
+            "id": "call_function_n81zda4wow85_2",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?query=trajectory+reward+VLM+navigation&searchtype=all&start=0",
+              "prompt": "Find arXiv papers on sub-instruction reward or step-by-step progress reward in vision-and-language navigation. Return title, arXiv ID, date, authors."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Based on the search results for \"trajectory reward VLM navigation,\" here are papers that address sub-instruction rewards or step-by-step progress rewards in vision-and-language navigation:\n\n**1. Guiding VLM Agents with Process Rewards at Inference Time for GUI Navigation**\n- arXiv ID: 2504.16073\n- Date: April 22, 2025\n- Authors: Zhiyuan Hu, Shiyun Xiong, Yifan Zhang, See-Kiong Ng, Anh Tuan Luu, Bo An, Shuicheng Yan, Bryan Hooi\n- Approach uses process supervision via a reward model during GUI navigation, optimizing actions at each inference step with step-level and trajectory-level feedback.\n\n**2. OpenVLN: Open-world Aerial Vision-Language Navigation**\n- arXiv ID: 2511.06182\n- Date: November 8, 2025\n- Authors: Peican Lin, Gan Sun, Chenxi Liu, Fazeng Li, Weihong Ren, Yang Cong\n- Introduces a long-horizon planner for trajectory synthesis that dynamically generates UAV actions via value-based rewards.\n\n**3. OpAgent: Operator Agent for Web Navigation**\n- arXiv ID: 2602.13559\n- Date: February 13, 2026\n- Authors: Yuyu Guo, Wenjie Yang, Siyuan Yang, et al.\n- Uses a Hybrid Reward Mechanism with a WebJudge for outcome assessment plus a Rule-based Decision Tree (RDT) for progress reward to address credit assignment in long-horizon navigation.\n\n**4. Planner Matters! Multi-agent Collaboration Framework for Long-horizon Planning**\n- arXiv ID: 2605.02168\n- Date: May 3, 2026\n- Authors: Wenyi Wu, Sibo Zhu, Kun Zhou, Biwei Huang\n- Optimizes the planner using trajectory-level rewards from a VLM-as-judge.\n\nNote: The search query \"trajectory reward VLM navigation\" returns mostly GUI/web/embodied navigation papers rather than classical Vision-and-Language Navigation (VLN) with step-by-step progress rewards. Paper #1 most directly addresses process-level rewards for navigation tasks."
+          },
+          {
+            "id": "call_function_n81zda4wow85_3",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?query=embodied+agent+LLM+judge&searchtype=all&start=0",
+              "prompt": "Find arXiv papers on LLM-as-judge for web agents or GUI agents, and whether such judges have been transferred to navigation. Return title, arXiv ID, date."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Based on the search results, here are the most relevant papers on LLM-as-judge for web/GUI/embodied navigation agents:\n\n1. **BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents in Functional Environments**\n   - arXiv ID: 2603.25747\n   - Date: January 29, 2026\n   - Uses LLM-as-a-judge evaluation for embodied VLM/VLA and Web/Mobile agents assessing behavioral safety risks.\n\n2. **GhostEI-Bench: Do Mobile Agents Resilience to Environmental Injection in Dynamic On-Device Environments?**\n   - arXiv ID: 2510.20333\n   - Date: October 23, 2025\n   - Introduces a judge-LLM protocol for mobile GUI agents that reviews action trajectories and screenshots to pinpoint failures.\n\n3. **Evaluating Generative Models as Interactive Emergent Representations of Human-Like Collaborative Behavior**\n   - arXiv ID: 2605.03855\n   - Date: May 5, 2026\n   - Uses LLM-based judges for automated behavior detection in embodied collaborative agents (theory of mind, planning).\n\n4. **Mind Companion: An Embodied Conversational Agent for Process-Based Psychotherapy**\n   - arXiv ID: 2606.17789\n   - Date: June 16, 2026\n   - Applies automated LLM-judge assessment against therapist responses.\n\n5. **Self-Evolving Multi-Agent Systems via Decentralized Memory**\n   - arXiv ID: 2605.22721\n   - Date: May 21, 2026\n   - Uses LLM-as-a-judge for stage-wise feedback on embodied tasks.\n\nPapers most directly transferring LLM-judge methods to **navigation** tasks: GhostEI-Bench (mobile GUI navigation) and BeSafe-Bench (web/mobile/embodied navigation)."
+          }
+        ],
+        "asyncStatus": "running",
+        "agentId": "ad7fff1bc4a8edff4",
+        "result": "Async agent launched successfully.\nagentId: ad7fff1bc4a8edff4 (internal ID - do not mention to user. Use SendMessage with to: 'ad7fff1bc4a8edff4' to continue this agent.)\nThe agent is working in the background. You will be notified automatically when it completes.\nDo not duplicate this agent's work — avoid working with the same files or topics it is using. Work on non-overlapping tasks, or briefly tell the user what you launched and end your response.\noutput_file: C:\\Users\\28208\\AppData\\Local\\Temp\\claude\\C--Users-28208-Documents-Obsidian-Vault\\44bb591b-ba36-4c12-952d-426bb135583d\\tasks\\ad7fff1bc4a8edff4.output\nDo NOT Read or tail this file via the shell tool — it is the full subagent JSONL transcript and reading it will overflow your context. If the user asks for progress, say the agent is still running; you'll get a completion notification."
+      },
+      "call_function_l9vkazyhhhes_4": {
+        "id": "call_function_l9vkazyhhhes_4",
+        "description": "扫描CoT/Reflexion在VLN-RL中的竞争工作",
+        "prompt": "在 2024-2026 年间，搜索 Vision-and-Language Navigation (VLN) 领域是否已有**语言条件化策略（Language-Conditioned Policy）+ 反思机制（Reflexion）+ CoT** 与 RL 结合的相关工作。\n\n已知 baseline：\n- ActiveVLN (arXiv:2509.12618, 2025-09) - 端到端，指令未条件化探索温度\n- VLN-R1 (arXiv:2506.17221, 2025-06) - 单轮预测，失败无反思\n- Reflexion (Shinn 2023) - LLM 反思机制\n- ReAct (Yao 2023) - Reasoning + Acting\n\n请通过 Google Scholar / arXiv / Semantic Scholar 搜索，验证以下问题：\n1. 2024-2026 是否有任何 VLN 工作使用 **language reflection / verbal self-correction**（失败时输出反思文本）？\n2. 2024-2026 是否有任何工作用 **CoT-style sub-instruction generation**（把长指令拆成子指令链）？\n3. 2024-2026 是否有 **instruction-conditioned entropy / exploration temperature** for VLN-RL？\n4. 2024-2026 是否有 **\"Think before you act\"** in VLN with RL？\n\n输出要求（500 字以内）：\n- 列出找到的相关工作（标题、arXiv ID、机构、核心 idea）\n- 评估\"方向 C：语言条件化策略\"在 2026 年还有多少创新空间\n- 给出 1-2 句结论：这个方向会不会撞车？是 \"安全区\" 还是 \"红海\"？\n\n使用 WebSearch 工具（建议 5-8 次搜索），不需 fetch 全文。仅返回关键发现。",
+        "mode": "async",
+        "isExpanded": false,
+        "status": "running",
+        "toolCalls": [
+          {
+            "id": "call_019ee92be0ca7dd19a6773c5",
+            "name": "WebSearch",
+            "input": {
+              "query": "Vision-and-Language Navigation VLN language reflection verbal self-correction failure反思 2024 2025"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"Vision-and-Language Navigation VLN language reflection verbal self-correction failure反思 2024 2025\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_019ee92be0ca7dd19a6773dc",
+            "name": "WebSearch",
+            "input": {
+              "query": "VLN Chain-of-Thought sub-instruction decomposition hierarchical instructions reinforcement learning 2024 2025"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"VLN Chain-of-Thought sub-instruction decomposition hierarchical instructions reinforcement learning 2024 2025\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_019ee92be0ca7dd19a6773e5",
+            "name": "WebSearch",
+            "input": {
+              "query": "VLN-RL instruction-conditioned entropy exploration temperature curriculum 2024 2025 2026"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"VLN-RL instruction-conditioned entropy exploration temperature curriculum 2024 2025 2026\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_019ee92be0ca7dd19a6773ff",
+            "name": "WebSearch",
+            "input": {
+              "query": "\"think before you act\" vision language navigation reinforcement learning reflexion 2025"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"\"think before you act\" vision language navigation reinforcement learning reflexion 2025\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_019ee92c09f77b82846ab956",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=vision+language+navigation+reflection+self-correction+reinforcement+learning&year=2024-2026&limit=20&fields=title,authors,year,venue,abstract,externalIds",
+              "prompt": "List paper titles, arXiv IDs, authors, years, and brief descriptions relevant to VLN with reflection or self-correction"
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "claude-sonnet-4-6 is temporarily unavailable, so auto mode cannot determine the safety of WebFetch right now. Wait briefly and then try this action again. If it keeps failing, continue with other tasks that don't require this action and come back to it later. Note: reading files, searching code, and other read-only operations do not require the classifier and can still be used."
+          },
+          {
+            "id": "call_019ee92c09f77b82846ab96f",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=vision+language+navigation+chain+of+thought+sub-instruction+hierarchical&year=2024-2026&limit=20&fields=title,authors,year,venue,abstract,externalIds",
+              "prompt": "List paper titles, arXiv IDs, authors, years, and brief descriptions for VLN with CoT or sub-instruction decomposition"
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "claude-sonnet-4-6 is temporarily unavailable, so auto mode cannot determine the safety of WebFetch right now. Wait briefly and then try this action again. If it keeps failing, continue with other tasks that don't require this action and come back to it later. Note: reading files, searching code, and other read-only operations do not require the classifier and can still be used."
+          },
+          {
+            "id": "call_019ee92c09f77b82846ab97e",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=vision+language+navigation+RL+exploration+entropy+temperature+curriculum&year=2024-2026&limit=15&fields=title,authors,year,venue,abstract,externalIds",
+              "prompt": "List paper titles, arXiv IDs, authors, years for VLN RL with exploration entropy or curriculum"
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "claude-sonnet-4-6 is temporarily unavailable, so auto mode cannot determine the safety of WebFetch right now. Wait briefly and then try this action again. If it keeps failing, continue with other tasks that don't require this action and come back to it later. Note: reading files, searching code, and other read-only operations do not require the classifier and can still be used."
+          },
+          {
+            "id": "call_019ee92c09f77b82846ab983",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?query=VLN+reflection+self-correction&start=0",
+              "prompt": "Extract paper titles, arXiv IDs, and authors for VLN reflection/self-correction papers"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "The page content you provided is from the arXiv search interface itself—it contains only search functionality, help text, and navigation links, but **no actual search results or paper listings**.\n\nThere are no paper titles, arXiv IDs, or authors for VLN (Vision-and-Language Navigation) reflection/self-correction papers in this content.\n\nIf you'd like me to extract such information, you would need to provide:\n1. A search results page from arXiv (e.g., a URL to `arxiv.org/search/?query=...&searchtype=all`), or\n2. A listing of specific papers\n\nWould you like to share the relevant search results or paper pages?"
+          },
+          {
+            "id": "call_019ee92e318574b18219b352",
+            "name": "Bash",
+            "input": {
+              "command": "curl -s \"http://export.arxiv.org/api/query?search_query=abs:%22vision+language+navigation%22+AND+abs:%22reflection%22&start=0&max_results=15&sortBy=submittedDate&sortOrder=descending\" 2>&1 | head -300",
+              "description": "Query arXiv API for VLN reflection papers"
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "claude-sonnet-4-6 is temporarily unavailable, so auto mode cannot determine the safety of Bash right now. Wait briefly and then try this action again. If it keeps failing, continue with other tasks that don't require this action and come back to it later. Note: reading files, searching code, and other read-only operations do not require the classifier and can still be used."
+          },
+          {
+            "id": "call_019ee92e318574b18219b364",
+            "name": "Bash",
+            "input": {
+              "command": "curl -s \"http://export.arxiv.org/api/query?search_query=abs:%22vision+language+navigation%22+AND+abs:%22self-correction%22&start=0&max_results=15&sortBy=submittedDate&sortOrder=descending\" 2>&1 | head -300",
+              "description": "Query arXiv API for VLN self-correction papers"
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "claude-sonnet-4-6 is temporarily unavailable, so auto mode cannot determine the safety of Bash right now. Wait briefly and then try this action again. If it keeps failing, continue with other tasks that don't require this action and come back to it later. Note: reading files, searching code, and other read-only operations do not require the classifier and can still be used."
+          },
+          {
+            "id": "call_019ee92e318574b18219b37a",
+            "name": "Bash",
+            "input": {
+              "command": "curl -s \"http://export.arxiv.org/api/query?search_query=abs:%22vision-language+navigation%22+AND+(abs:%22chain-of-thought%22+OR+abs:%22sub-instruction%22+OR+abs:%22hierarchical+planning%22)&start=0&max_results=15&sortBy=submittedDate&sortOrder=descending\" 2>&1 | head -300",
+              "description": "Query arXiv API for VLN CoT/hierarchical papers"
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "claude-sonnet-4-6 is temporarily unavailable, so auto mode cannot determine the safety of Bash right now. Wait briefly and then try this action again. If it keeps failing, continue with other tasks that don't require this action and come back to it later. Note: reading files, searching code, and other read-only operations do not require the classifier and can still be used."
+          },
+          {
+            "id": "call_019ee92e318574b18219b389",
+            "name": "Bash",
+            "input": {
+              "command": "curl -s \"http://export.arxiv.org/api/query?search_query=abs:%22vision-language+navigation%22+AND+(abs:%22exploration%22+OR+abs:%22entropy%22+OR+abs:%22curriculum%22)&start=0&max_results=15&sortBy=submittedDate&sortOrder=descending\" 2>&1 | head -300",
+              "description": "Query arXiv API for VLN exploration/entropy papers"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "(Bash completed with no output)"
+          },
+          {
+            "id": "call_019ee92f11897d61b57b9bb2",
+            "name": "Bash",
+            "input": {
+              "command": "curl -s \"http://export.arxiv.org/api/query?search_query=abs:%22vision+language+navigation%22+AND+abs:%22reflect%22&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending\" 2>&1 | grep -E '<title>|<id>|</id>' | head -80",
+              "description": "Query arXiv for VLN reflect papers"
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "claude-sonnet-4-6 is temporarily unavailable, so auto mode cannot determine the safety of Bash right now. Wait briefly and then try this action again. If it keeps failing, continue with other tasks that don't require this action and come back to it later. Note: reading files, searching code, and other read-only operations do not require the classifier and can still be used."
+          },
+          {
+            "id": "call_019ee92f11897d61b57b9bc6",
+            "name": "Bash",
+            "input": {
+              "command": "curl -s \"http://export.arxiv.org/api/query?search_query=all:%22vision-language+navigation%22+AND+all:%22think+before%22&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending\" 2>&1 | grep -E '<title>|<id>' | head -80",
+              "description": "Query arXiv for think-before-act VLN"
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "claude-sonnet-4-6 is temporarily unavailable, so auto mode cannot determine the safety of Bash right now. Wait briefly and then try this action again. If it keeps failing, continue with other tasks that don't require this action and come back to it later. Note: reading files, searching code, and other read-only operations do not require the classifier and can still be used."
+          },
+          {
+            "id": "call_019ee92f11897d61b57b9bdf",
+            "name": "Bash",
+            "input": {
+              "command": "curl -s \"http://export.arxiv.org/api/query?search_query=all:%22VLN%22+AND+all:%22sub-goal%22+AND+all:%22reinforcement%22&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending\" 2>&1 | grep -E '<title>|<id>' | head -80",
+              "description": "Query arXiv for VLN sub-goal papers"
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "claude-sonnet-4-6 is temporarily unavailable, so auto mode cannot determine the safety of Bash right now. Wait briefly and then try this action again. If it keeps failing, continue with other tasks that don't require this action and come back to it later. Note: reading files, searching code, and other read-only operations do not require the classifier and can still be used."
+          },
+          {
+            "id": "call_019ee92f11897d61b57b9be3",
+            "name": "Bash",
+            "input": {
+              "command": "curl -s \"http://export.arxiv.org/api/query?search_query=all:%22vision-language+navigation%22+AND+all:%22language+reflection%22&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending\" 2>&1 | grep -E '<title>|<id>' | head -80",
+              "description": "Query arXiv for VLN language reflection"
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "claude-sonnet-4-6 is temporarily unavailable, so auto mode cannot determine the safety of Bash right now. Wait briefly and then try this action again. If it keeps failing, continue with other tasks that don't require this action and come back to it later. Note: reading files, searching code, and other read-only operations do not require the classifier and can still be used."
+          },
+          {
+            "id": "call_019ee92f981d79718f04fa6a",
+            "name": "Bash",
+            "input": {
+              "command": "curl -s \"http://export.arxiv.org/api/query?search_query=abs:%22vision-language+navigation%22+AND+abs:%22reflect%22&start=0&max_results=15\" | grep -E '<title>|<id>' | head -40",
+              "description": "arXiv VLN reflect query"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "(Bash completed with no output)"
+          },
+          {
+            "id": "call_019ee92fbe877d03b80d4950",
+            "name": "Bash",
+            "input": {
+              "command": "curl -s \"http://export.arxiv.org/api/query?search_query=abs:%22vision-language+navigation%22+AND+abs:reflection&start=0&max_results=20\"",
+              "description": "arXiv VLN reflection broad query"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "(Bash completed with no output)"
+          },
+          {
+            "id": "call_019ee930f935721385fdb1c1",
+            "name": "Bash",
+            "input": {
+              "command": "curl -v \"http://export.arxiv.org/api/query?search_query=vision-language+navigation+reflection&max_results=10\" 2>&1 | tail -50",
+              "description": "Debug arXiv query"
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "claude-sonnet-4-6 is temporarily unavailable, so auto mode cannot determine the safety of Bash right now. Wait briefly and then try this action again. If it keeps failing, continue with other tasks that don't require this action and come back to it later. Note: reading files, searching code, and other read-only operations do not require the classifier and can still be used."
+          },
+          {
+            "id": "call_019ee931add67342b7865fb9",
+            "name": "Bash",
+            "input": {
+              "command": "curl -sL \"http://export.arxiv.org/api/query?search_query=vision-language+navigation+reflection&max_results=10\" -o /tmp/vln1.xml && wc -l /tmp/vln1.xml",
+              "description": "Fetch arXiv API to file"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "299 /tmp/vln1.xml"
+          },
+          {
+            "id": "call_019ee93202577a819ba488b6",
+            "name": "Grep",
+            "input": {
+              "pattern": "&lt;title&gt;|&lt;id&gt;http",
+              "path": "/tmp/vln1.xml",
+              "output_mode": "content",
+              "head_limit": 40
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "<tool_use_error>Path does not exist: /tmp/vln1.xml. Note: your current working directory is C:\\Users\\28208\\Documents\\Obsidian Vault.</tool_use_error>"
+          },
+          {
+            "id": "call_019ee93202577a819ba488c5",
+            "name": "Bash",
+            "input": {
+              "command": "curl -sL \"http://export.arxiv.org/api/query?search_query=vision-language+navigation+self-correction&max_results=10\" -o /tmp/vln2.xml && curl -sL \"http://export.arxiv.org/api/query?search_query=vision-language+navigation+chain-of-thought&max_results=10\" -o /tmp/vln3.xml && curl -sL \"http://export.arxiv.org/api/query?search_query=vision-language+navigation+sub-instruction+hierarchical&max_results=10\" -o /tmp/vln4.xml && curl -sL \"http://export.arxiv.org/api/query?search_query=vision-language+navigation+exploration+reinforcement&max_results=10\" -o /tmp/vln5.xml && curl -sL \"http://export.arxiv.org/api/query?search_query=vision-language+navigation+curriculum+reinforcement&max_results=10\" -o /tmp/vln6.xml && wc -l /tmp/vln*.xml",
+              "description": "Fetch multiple arXiv queries in parallel"
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "claude-sonnet-4-6 is temporarily unavailable, so auto mode cannot determine the safety of Bash right now. Wait briefly and then try this action again. If it keeps failing, continue with other tasks that don't require this action and come back to it later. Note: reading files, searching code, and other read-only operations do not require the classifier and can still be used."
+          }
+        ],
+        "asyncStatus": "running",
+        "agentId": "ac6fc79d993f47c5b",
+        "result": "Async agent launched successfully.\nagentId: ac6fc79d993f47c5b (internal ID - do not mention to user. Use SendMessage with to: 'ac6fc79d993f47c5b' to continue this agent.)\nThe agent is working in the background. You will be notified automatically when it completes.\nDo not duplicate this agent's work — avoid working with the same files or topics it is using. Work on non-overlapping tasks, or briefly tell the user what you launched and end your response.\noutput_file: C:\\Users\\28208\\AppData\\Local\\Temp\\claude\\C--Users-28208-Documents-Obsidian-Vault\\44bb591b-ba36-4c12-952d-426bb135583d\\tasks\\ac6fc79d993f47c5b.output\nDo NOT Read or tail this file via the shell tool — it is the full subagent JSONL transcript and reading it will overflow your context. If the user asks for progress, say the agent is still running; you'll get a completion notification."
+      },
+      "call_function_l9vkazyhhhes_5": {
+        "id": "call_function_l9vkazyhhhes_5",
+        "description": "扫描ABC未覆盖的全新创新空白",
+        "prompt": "在 2024-2026 年间，搜索 Vision-and-Language Navigation (VLN) / Embodied Navigation 领域**尚未被 ActiveVLN 和 VLN-R1 覆盖**的全新创新方向。\n\n已知 SOTA（这两个都是 multi-modal LLM + RL for VLN 的最新工作）：\n- ActiveVLN (arXiv:2509.12618, 2025-09) - Qwen2.5-VL + multi-turn GRPO + Habitat\n- VLN-R1 (arXiv:2506.17221, 2025-06) - Qwen2-VL + RFT + TDR + Habitat\n- NaVid (RSS 2024), StreamVLN (arXiv:2507.05240), UniNaVid (RSS 2025)\n\n用户已有的 3 个候选方向（A/B/C）：\n- A: 课程学习/分层RL\n- B: 多模态可验证奖励\n- C: 语言条件化策略\n\n请通过 Google Scholar / arXiv / Semantic Scholar 搜索 2025-2026 最新工作，找出 **ABC 三个方向都未覆盖的全新创新点**。重点扫描以下方向：\n1. **Safety / Safe RL for VLN** - 是否有 constraint-based RL 应用到导航？\n2. **Sim-to-Real / Real-World VLN** - 是否有从 Habitat 迁移到真实机器人的 RL 工作？\n3. **World Model for VLN** - 是否有 learned dynamics model 替代 simulator 做 rollout？\n4. **Memory-Augmented RL** - 是否有显式 memory bank + RL 用于 long-horizon VLN？\n5. **Multi-Agent VLN** - 是否有 collaborative navigation + RL？\n6. **Human-in-the-Loop RL for VLN** - 是否有 interactive RL with human feedback？\n7. **Dynamic/Outdoor VLN** - 室外导航、移动障碍物场景的 RL 工作？\n8. **3D Scene Graph + RL** - 用 3D 场景图做 state representation + RL？\n9. **Failure Recovery / Backtracking RL** - 强化学习专门学习\"如何从错误恢复\"？\n10. **Cross-Embodiment Transfer** - 把在 Habitat 训的策略迁移到不同机器人平台？\n\n输出要求（800 字以内）：\n- 列出 5-8 个**最 promising** 的新方向\n- 每个方向给出：1-2 篇代表论文（arXiv ID）、核心 idea、是否已被探索、预期新颖度\n- **重点**：哪些方向在 2026 年硕士论文选题上 \"蓝海\" 程度高（无人做过、可行性好、有完整实验空间）？\n\n使用 WebSearch 工具（建议 8-10 次搜索），不需 fetch 全文。仅返回关键发现。",
+        "mode": "async",
+        "isExpanded": false,
+        "status": "completed",
+        "toolCalls": [
+          {
+            "id": "call_019ee92c9f2d76b0a5e96294",
+            "name": "WebSearch",
+            "input": {
+              "query": "safety constraint RL vision-language navigation safe exploration 2025 arxiv"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"safety constraint RL vision-language navigation safe exploration 2025 arxiv\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_019ee92c9f2d76b0a5e962a9",
+            "name": "WebSearch",
+            "input": {
+              "query": "sim-to-real transfer vision-language navigation real robot deployment RL 2025"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"sim-to-real transfer vision-language navigation real robot deployment RL 2025\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_019ee92c9f2d76b0a5e962bb",
+            "name": "WebSearch",
+            "input": {
+              "query": "world model learned dynamics vision-language navigation rollout 2025 arxiv"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"world model learned dynamics vision-language navigation rollout 2025 arxiv\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_019ee92c9f2d76b0a5e962cc",
+            "name": "WebSearch",
+            "input": {
+              "query": "memory bank augmented reinforcement learning long-horizon navigation 2025 arxiv"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"memory bank augmented reinforcement learning long-horizon navigation 2025 arxiv\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_019ee92cb39b79e3892f9107",
+            "name": "WebSearch",
+            "input": {
+              "query": "safe reinforcement learning embodied navigation 2025"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"safe reinforcement learning embodied navigation 2025\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_019ee92cb39b79e3892f9115",
+            "name": "WebSearch",
+            "input": {
+              "query": "world model VLN vision language navigation 2025"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"world model VLN vision language navigation 2025\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_019ee92cb39b79e3892f9129",
+            "name": "WebSearch",
+            "input": {
+              "query": "sim2real vision language navigation real world robot 2025"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"sim2real vision language navigation real world robot 2025\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_019ee92cb39b79e3892f9137",
+            "name": "WebSearch",
+            "input": {
+              "query": "memory augmented agent long horizon navigation 2025"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Web search results for query: \"memory augmented agent long horizon navigation 2025\"\n\nAPI Error: 400 invalid params, function name or parameters is empty (2013)\n\n\nREMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks."
+          },
+          {
+            "id": "call_019ee92df9f371d3899bb4dc",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?searchtype=all&query=safety+constraint+reinforcement+learning+embodied+navigation&start=0",
+              "prompt": "Extract all paper titles, arXiv IDs, and brief abstracts from this search page about safety constraint RL for embodied navigation. Focus on papers from 2024-2026."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "# arXiv Search Results: Safety Constraint Reinforcement Learning Embodied Navigation\n\n**1 result found** (1 from 2024)\n\n## Paper 1\n\n- **arXiv ID:** 2409.11403\n- **Title:** UniLCD: Unified Local-Cloud Decision-Making via Reinforcement Learning\n- **Authors:** Kathakoli Sengupta, Zhongkai Shangguan, Sandesh Bharadwaj, Sanjay Arora, Eshed Ohn-Bar, Renato Mancuso\n- **Submitted:** September 17, 2024\n- **Comments:** ECCV 24\n\n**Abstract:** \"Embodied vision-based real-world systems, such as mobile robots, require a careful balance between energy consumption, compute latency, and safety constraints to optimize operation across dynamic tasks and contexts. As local computation tends to be restricted, offloading the computation, ie, to a remote server, can save local resources while providing access to high-quality predictions from powerful and large models.\"\n\nThe paper introduces UniLCD, a hybrid inference framework for local-cloud collaboration. It uses reinforcement learning to optimize a routing module for safety-critical mobile systems, validated on a crowded navigation task. Results show over 35% improvement over split computing and early exit baselines.\n\n---\n\n**Note:** Only one result was returned from this search, and no papers from 2025-2026 appeared in the results shown."
+          },
+          {
+            "id": "call_019ee92df9f371d3899bb4e1",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?searchtype=all&query=world+model+vision+language+navigation&start=0",
+              "prompt": "Extract all paper titles, arXiv IDs, and brief abstracts about world models for vision-language navigation. Focus on papers from 2024-2026."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Below is a curated list of papers from the arXiv results that explicitly address **world models for vision-language navigation (VLN)**, drawn from the 2024–2026 timeframe.\n\n---\n\n**1. WorldFly: A World-Model-Based Vision-Language-Action Model for UAV Navigation**\n- arXiv: 2606.06147\n- Proposes WorldFly, which uses dual-branch coupled flow matching to jointly generate future video predictions and navigation actions for UAVs in cluttered urban environments.\n\n**2. ImagineUAV: Aerial Vision-Language Navigation via World-Action Modeling and Kinodynamic Planning**\n- arXiv: 2606.01205\n- Employs a latent video diffusion model to \"imagine\" future observations, from which 6-DoF motions are extracted and refined by a kinodynamic planner for aerial VLN.\n\n**3. WorldVLN: Autoregressive World Action Model for Aerial Vision-Language Navigation**\n- arXiv: 2605.15964\n- Introduces an autoregressive world action model that predicts short-horizon world-state transitions and decodes them into executable waypoint actions for aerial VLN.\n\n**4. Qwen-RobotWorld: Unifying Embodied World Modeling through Language-Conditioned Video Generation**\n- arXiv: 2606.17030\n- A language-conditioned video world model predicting physically grounded future visual trajectories for manipulation, driving, and indoor navigation.\n\n**5. Metis: A Generalizable and Efficient World-Action Model for Autonomous Driving and Urban Navigation**\n- arXiv: 2606.15869\n- Decouples video generation and action prediction using a Mixture-of-Transformers design, enabling efficient world-action modeling for navigation tasks.\n\n**6. GN0: A Unified Paradigm for Generation, Evaluation, and Policy Learning in VLN**\n- arXiv: 2606.03682\n- Uses 3D Gaussian Splatting for high-fidelity scene rendering and develops an RL-driven navigation foundation model (BAE) with Bird's Eye View memory.\n\n**7. Foresight: Iterative Reasoning About Clues that Matter for Navigation**\n- arXiv: 2606.12550\n- A finetuned VLM alternates between proposing motion plans and critiquing them, enabling iterative plan refinement in open-world mapless navigation.\n\n**8. Plan in Sandbox, Navigate in Open Worlds (SAGE)**\n- arXiv: 2605.10118\n- Agents learn within a physics-grounded semantic abstraction that mimics mental simulation, bridging abstract policy to open-world control.\n\n**9. World2Minecraft: Occupancy-Driven Simulated Scenes Construction**\n- arXiv: 2604.27578\n- Converts real-world scenes into structured Minecraft environments via 3D semantic occupancy, enabling downstream VLN tasks.\n\n---\n\n**Note:** The remaining results (e.g., AsyncShield, AgenticNav, SALSA, StereoNav) focus on VLA, VLM, or vision-language frameworks for navigation but do not center on a learned world model. Several entries (e.g., Qwen-VLA, Foresight) involve action prediction under partial observability but are not strictly \"world model\" approaches."
+          },
+          {
+            "id": "call_019ee92df9f371d3899bb4f7",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?searchtype=all&query=sim+to+real+vision+language+navigation&start=0",
+              "prompt": "Extract all paper titles, arXiv IDs, and brief abstracts about sim-to-real transfer for vision-language navigation. Focus on papers from 2024-2026."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "# Sim-to-Real Transfer for Vision-Language Navigation (2024-2026)\n\n## 1. Slow Brain, Fast Planner: Latency-Resilient VLM-Augmented Urban Navigation\n- **arXiv ID:** 2606.20458\n- **Submitted:** June 2026\n- **Abstract:** Proposes a VLM-Planner interface that selects candidate trajectories for sidewalk navigation, addressing the \"trajectory scoring gap.\" Uses a training-free latency-resilient fusion layer that converts stale VLM selections into real-time planner scoring via geometric similarity with exponential decay.\n\n## 2. POINav: Benchmarking and Enhancing Final-Meters Arrival in Real-World VLN\n- **arXiv ID:** 2605.28237\n- **Submitted:** May 2026\n- **Abstract:** Introduces POINav-Bench, a benchmark with 11 commercial areas reconstructed via 3D Gaussian Splatting covering 163 POIs. Presents a Brain-Action Framework where a Brain module performs POI-grounded reasoning to guide waypoint prediction for real-world execution.\n\n## 3. ROSClaw: Hierarchical Semantic-Physical Framework for Multi-Agent Collaboration\n- **arXiv ID:** 2604.04664\n- **Submitted:** April 2026\n- **Abstract:** Unified agent framework for heterogeneous robots integrating policy learning and task execution within a single VLM controller. Uses e-URDF representations to construct sim-to-real topological mapping for real-time access to physical states of simulated and real agents.\n\n## 4. R2F: Repurposing Ray Frontiers for LLM-free Object Navigation\n- **arXiv ID:** 2603.08475\n- **Submitted:** March 2026\n- **Abstract:** LLM-free framework using frontier regions as direction-conditioned semantic hypotheses. Eliminates iterative large-model reasoning by reducing navigation to embedding-based frontier scoring. Includes R2F-VLN extension for free-form language instructions.\n\n## 5. Direct Contact-Tolerant Motion Planning With Vision Language Models\n- **arXiv ID:** 2603.05017\n- **Submitted:** March 2026\n- **Abstract:** DCT planner integrating VLMs into direct point perception, featuring a VLM point cloud partitioner (VPP) for contact-tolerance reasoning. Implemented in Isaac Sim and on a real car-like robot, outperforming baselines in cluttered environments.\n\n## 6. One Agent to Guide Them All: MLLMs for VLN via Explicit World Representation\n- **arXiv ID:** 2602.15400\n- **Submitted:** February 2026\n- **Abstract:** Decoupled design separating low-level spatial estimation from semantic planning. Introduces an interactive metric world representation allowing MLLMs to reason for decision-making. Achieves 48.8% SR on R2R-CE and 42.2% on RxR-CE, with zero-shot sim-to-real transfer to TurtleBot 4 and aerial drone.\n\n## 7. LAMP: Implicit Language Map for Robot Navigation\n- **arXiv ID:** 2602.11862\n- **Submitted:** February 2026\n- **Abstract:** Neural language field-based navigation framework that learns a continuous, language-driven map. Combines implicit representation with a sparse graph for coarse path planning, using gradient-based optimization for fine-grained path generation near goals.\n\n## 8. CoINS: Counterfactual Interactive Navigation via Skill-Aware VLM\n- **arXiv ID:** 2601.03956\n- **Submitted:** January 2026\n- **Abstract:** Hierarchical framework integrating skill-aware reasoning with low-level execution. Fine-tunes InterNav-VLM to evaluate causal effects of object removal on navigation connectivity, paired with a reinforcement-learned skill library for path clearance.\n\n## 9. AirNav: Large-Scale UAV VLN Dataset with Natural Instructions\n- **arXiv ID:** 2601.03707\n- **Submitted:** January 2026\n- **Abstract:** Large-scale benchmark with 137K navigation samples built on real urban aerial data and natural instructions from a human-LLM collaborative pipeline. Proposes AirVLN-R1 achieving 51.82% success rate with sim-to-real transfer evidence on physical UAVs.\n\n## 10. VLNVerse: Benchmark for VLN with Versatile, Embodied, Realistic Simulation\n- **arXiv ID:** 2512.19021\n- **Submitted:** December 2025\n- **Abstract:** Large-scale, extensible benchmark unifying fragmented VLN tasks within a single framework. Features full-kinematics embodied agents in realistic simulation powered by a robust physics engine for sim-to-real generalization evaluation.\n\n## 11. VLD: Visual Language Goal Distance for RL Navigation\n- **arXiv ID:** 2512.07976\n- **Submitted:** December 2025\n- **Abstract:** Decoupled framework training a self-supervised distance-to-goal predictor on internet-scale video data. RL policy is trained in simulation with privileged geometric signals and noise injection to mimic predictor uncertainty at deployment.\n\n## 12. SINGER: Onboard Generalist VLN Policy for Drones\n- **arXiv ID:** 2509.18610\n- **Submitted:** September 2025\n- **Abstract:** Language-guided autonomous drone navigation using only onboard sensing. Leverages Gaussian Splatting flight simulator with minimal sim-to-real gap and RRT-inspired multi-trajectory expert. Outperforms baseline by 23.33% in reaching queries with 10% fewer collisions.\n\n## 13. LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction\n- **arXiv ID:** 2506.13751\n- **Submitted:** June 2025\n- **Abstract:** First sim-to-real-ready vision-language closed-loop benchmark for humanoid WBC with over 150 tasks. Hierarchical framework with vision-language policy learning latent action vocabulary and reinforcement-learned WBC policy consuming latent verbs.\n\n## 14. Sim-to-Real Transfer via 3D Feature Fields for VLN\n- **arXiv ID:** 2406.09798\n- **Submitted:** June 2024\n- **Abstract:** Endows monocular robots with panoramic traversability perception through a semantic traversable map and 3D feature fields. Transfers high-performance panoramic VLN models to common monocular robots, validated in both simulation and real-world environments.\n\n## 15. NaVid: Video-based VLM Plans the Next Step for VLN\n- **arXiv ID:** 2402.15852\n- **Submitted:** February 2024\n- **Abstract:** Video-based VLM using only monocular RGB video stream to output next-step actions, eliminating odometer, map, or depth inputs. Trained on 510k navigation samples plus 763k web data, achieving state-of-the-art cross-dataset and Sim2Real transfer.\n\n## 16. Sim-to-Real Transfer for Vision-and-Language Navigation\n- **arXiv ID:** 2011.03807\n- **Submitted:** November 2020\n- **Abstract:** Transferred a VLN agent trained in simulation to a physical robot using a subgoal model and domain randomization. Reports 46.8% real-world success rate with prior mapping versus 22.5% without, in a 325m² office space with 1.3km of instructions.\n\n## Related Sim-to-Real References (2024-2026)\n\n- **MetaScenes** (2505.02388, May 2025): Large-scale 3D scene dataset for sim-to-real transfer with VLN domain transfer benchmark.\n- **HA-VLN 2.0** (2503.14229, March 2025): Human-aware navigation benchmark with real-world robot experiments validating sim-to-real transfer.\n- **Openfly** (2502.18041, February 2025): Aerial VLN platform using 3D Gaussian Splatting for real-to-sim rendering.\n- **RoomTour3D** (2412.08591, December 2024): Video-instruction dataset from web room tours enabling trainable zero-shot VLN agents.\n- **Virtual Guidance for Navigation** (2303.02731, March 2023): Augmented reality mid-level representation with sim-to-real framework."
+          },
+          {
+            "id": "call_019ee92ec0d67fc0b4839ad1",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?searchtype=all&query=multi-agent+collaborative+vision+language+navigation&start=0",
+              "prompt": "Extract all paper titles, arXiv IDs, and brief abstracts about multi-agent collaborative vision-language navigation. Focus on papers from 2024-2026."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "# Multi-Agent Collaborative Vision-Language Navigation Papers (2024-2026)\n\n## 1. DeCoNav (arXiv:2604.12486)\n**Authors:** Sunyao Zhou, Yunzi Wu, Tianhang Wang, et al.\n**Submitted:** April 14, 2026\n**Abstract:** Presents a decentralized framework coupling event-triggered dialogue with dynamic task allocation and replanning for multi-robot coordination. Implemented in DeCoNavBench with 1,213 tasks across 176 HM3D scenes, improving the both-success rate by 69.2%.\n\n## 2. MA-CoNav (arXiv:2603.03024)\n**Authors:** Ling Luo, Qianqian Bai\n**Submitted:** March 3, 2026\n**Abstract:** Proposes a Multi-Agent Collaborative Navigation framework with \"Master-Slave\" hierarchical architecture. Decouples perception, planning, execution, and memory across specialized agents (Observation, Planning, Execution, Memory), with \"Local-Global\" dual-stage reflection.\n\n## 3. RAGNav (arXiv:2603.03745)\n**Authors:** Ling Luo, Qiangian Bai\n**Submitted:** March 4, 2026\n**Abstract:** Retrieval-Augmented Topological Reasoning Framework for Multi-Goal VLN. Features a Dual-Basis Memory system integrating topological maps with semantic forests, plus anchor-guided conditional retrieval and topological neighbor score propagation.\n\n## 4. SimWorld-Robotics (arXiv:2512.10046)\n**Authors:** Yan Zhuang, Jiawei Ren, Xiaokang Ye, et al.\n**Submitted:** December 10, 2025 (NeurIPS 2025)\n**Abstract:** UE5-based simulation platform for photorealistic urban environments supporting multi-robot control. Builds two benchmarks: multimodal instruction-following and multi-agent search tasks requiring grounded communication.\n\n## 5. CAMON (arXiv:2407.00632)\n**Authors:** Pengying Wu, Yao Mu, Kangjie Zhou, et al.\n**Submitted:** June 30, 2024 (RSS 2024 Workshop)\n**Abstract:** Decentralized multi-agent navigation framework leveraging LLM-enabled communication. Uses communication-triggered dynamic leadership for faster team consensus with fewer communication instances in multi-object navigation tasks.\n\n## Related 2024-2026 Papers\n\n- **CoIN (arXiv:2412.01250):** Collaborative Instance Object Navigation using uncertainty-aware human-agent dialogues with VLMs/LLMs to minimize user input.\n- **AURA (arXiv:2604.01659):** Multimodal Shared Autonomy reducing urban navigation takeover frequency by 44%.\n- **GamerAstra (arXiv:2506.22937):** Multi-agent framework supporting blind/low-vision players in 2D video games.\n- **AutoGUI-v2 (arXiv:2604.24441):** GUI functionality understanding benchmark (related to vision-language agents).\n- **VirtualEnv (arXiv:2601.07553):** UE5 platform for embodied AI with multi-agent collaboration scenarios.\n\n## Earlier Work\n- **Vision-Dialog Navigation by Exploring Cross-modal Memory (arXiv:2003.06745, CVPR 2020):** Cross-modal Memory Network (CMN) with language and visual memory modules for vision-dialog navigation.\n\nNote: Results include papers tangentially related to multi-agent collaborative vision-language navigation, such as surveys and adjacent frameworks. The most directly relevant papers are #1-5 above."
+          },
+          {
+            "id": "call_019ee92ec0d67fc0b4839aea",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?searchtype=all&query=human+in+the+loop+reinforcement+learning+navigation+feedback&start=0",
+              "prompt": "Extract all paper titles, arXiv IDs, and brief abstracts about human-in-the-loop reinforcement learning for navigation with feedback. Focus on papers from 2024-2026."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "# Human-in-the-Loop RL for Navigation with Feedback (2024-2026)\n\n## 2026\n\n**1. Foresight: Iterative Reasoning About Clues that Matter for Navigation** (arXiv:2606.12550)\nAuthors: Zhang, Qi, Su, Meng, Zhang, Biswas\nPresents a test-time framework where a fine-tuned VLM alternates between proposing motion plans and critiquing them, with a reward model learned from human feedback used to post-train the VLM with RL. Achieves 37% improvement in task success and 52% reduction in interventions across 6 real-world environments.\n\n**2. AgenticRL: Self-Refining Agentic RL for Vision-Conditioned UAV Navigation** (arXiv:2606.03963)\nAuthors: Khan, Yaqoot, Habel, Mustafa, Tsetserukou\nUses a multimodal GPT agent to generate reward functions, train policies via PPO, and refine them through self-improvement. Achieves 71% policy improvement and 91% real-world success rate.\n\n**3. Leveraging Human Feedback for Semantically-Relevant Skill Discovery** (arXiv:2604.24127)\nAuthors: Hussonnois, Karimpanal, Rana\nIntroduces semantic labeling to address feedback inefficiency in skill discovery, enabling agents to identify meaningful behaviors through human cognitive input.\n\n**4. Closed-Loop Verbal RL for Task-Level Robotic Planning** (arXiv:2603.22169)\nAuthors: Plotnikov et al.\nBehavior Trees are refined by an LLM actor using natural-language feedback from a VLM critic observing the robot, enabling closed-loop adaptation.\n\n**5. CRAFT: Coaching RL Autonomously using Foundation Models** (arXiv:2509.14380)\nAuthors: Choi, Ryu, Ock, Mehr\nFoundation models act as \"coaches,\" decomposing tasks and generating reward functions refined through VLM-guided loops for multi-robot coordination.\n\n## 2024\n\n**6. SALM: Unifying LLM and Deep RL for Human-in-Loop Interactive Socially-aware Navigation** (arXiv:2403.15648)\nAuthors: Wang, Obi, Bera, Min\nIntegrates DRL with LLM capabilities to convert high-level user commands into precise navigation actions, with adaptive feedback fusion.\n\n**7. CLoSD: Closing the Loop between Simulation and Diffusion** (arXiv:2410.03448)\nAuthors: Tevet et al.\nCombines motion diffusion models with RL-based physics controllers for text-driven character control including navigation tasks."
+          },
+          {
+            "id": "call_019ee92ec0d67fc0b4839afa",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?searchtype=all&query=outdoor+vision+language+navigation+reinforcement+learning&start=0",
+              "prompt": "Extract all paper titles, arXiv IDs, and brief abstracts about outdoor dynamic vision-language navigation with moving obstacles or RL. Focus on papers from 2024-2026."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Based on the search results, here are the papers related to outdoor vision-language navigation with RL:\n\n## 1. WorldVLN: Autoregressive World Action Model for Aerial Vision-Language Navigation\n- **arXiv ID:** 2605.15964\n- **Authors:** Baining Zhao, Jiacheng Xu, Weicheng Feng, et al.\n- **Date:** Submitted May 15, 2026\n- **Abstract focus:** Aerial VLN formulated as \"a prediction-driven world-action problem.\" Proposes WorldVLN as \"the first autoregressive world action model for aerial VLN.\" Introduces Action-aware GRPO, described as \"the first reinforcement learning method tailored to autoregressive WAMs.\" Reports \"12%+ success-rate gains\" on outdoor/indoor benchmarks, with zero-shot transfer to real drone deployment.\n\n## 2. GrndCtrl: Grounding World Models via Self-Supervised Reward Alignment\n- **arXiv ID:** 2512.01952\n- **Authors:** Haoyang He, Jay Patrikar, Dong-Ki Kim, et al.\n- **Date:** Submitted December 1, 2025\n- **Abstract focus:** Introduces RLWG framework that \"aligns pretrained world models with a physically verifiable structure through geometric and perceptual rewards.\" Uses Group Relative Policy Optimization (GRPO) for reward-aligned adaptation, achieving \"superior spatial coherence and navigation stability over supervised fine-tuning in outdoor environments.\"\n\n## 3. OpenVLN: Open-world Aerial Vision-Language Navigation\n- **arXiv ID:** 2511.06182\n- **Authors:** Peican Lin, Gan Sun, Chenxi Liu, et al.\n- **Date:** Submitted November 8, 2025\n- **Abstract focus:** Open-world aerial VLN framework that \"reconfigure[s] a reinforcement learning framework to optimize the VLM for UAV navigation tasks.\" Uses rule-based policies with limited data. Reports \"4.34% in Success Rate, 6.19% in Oracle Success Rate, and 4.07% in Success weighted by Path Length\" gains on TravelUAV benchmark for long-horizon UAV navigation.\n\n## 4. SARO: Space-Aware Robot System for Terrain Crossing via Vision-Language Model\n- **arXiv ID:** 2407.16412\n- **Authors:** Shaoting Zhu, Derun Li, Linzhan Mou, et al.\n- **Date:** Submitted July 23, 2024\n- **Abstract focus:** System for quadruped robot navigation through 3D terrains using VLM with \"a high-level reasoning module, a closed-loop sub-task execution module, and a low-level control policy.\" Trains control policy \"by reinforcement learning\" using the Probability Annealing Selection method. Generalizes to \"diverse indoor and outdoor scenarios and terrains.\"\n\n**Note on moving obstacles:** None of the four papers explicitly focus on moving obstacles in outdoor environments. The search results emphasize aerial/drone navigation, terrain crossing, and world model grounding rather than dynamic obstacle avoidance specifically."
+          },
+          {
+            "id": "call_019ee92ec0d67fc0b4839b0b",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?searchtype=all&query=3D+scene+graph+navigation+reinforcement+learning&start=0",
+              "prompt": "Extract all paper titles, arXiv IDs, and brief abstracts about 3D scene graph representations combined with reinforcement learning for navigation. Focus on papers from 2024-2026."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "# Papers on 3D Scene Graphs with Reinforcement Learning for Navigation\n\n## 1. arXiv:2606.01565 (June 2026)\n**Title:** Hierarchical Semantic-Augmented Navigation: Optimal Transport and Graph-Driven Reasoning for Vision-Language Navigation\n**Authors:** Xiang Fang, Wanlong Fang, Changshuo Wang\n**Abstract excerpt:** Introduces HSAN framework with a dynamic hierarchical semantic scene graph leveraging vision-language models for multi-level environmental representations, combined with optimal transport-based topological planning and graph-aware reinforcement learning for low-level control.\n\n## 2. arXiv:2506.04505 (June 2025)\n**Title:** SGN-CIRL: Scene Graph-based Navigation with Curriculum, Imitation, and Reinforcement Learning\n**Authors:** Nikita Oskolkov, Huzhenyu Zhang, Dmitry Makarov, Dmitry Yudin, Aleksandr Panov\n**Abstract excerpt:** Proposes a framework for mapless reinforcement learning-based robot navigation using learnable open-vocabulary 3D scene graph representations, combined with imitation learning and curriculum learning. Experiments in Isaac Sim showed significant success rate improvements.\n\n## 3. arXiv:2505.00831 (May 2025)\n**Title:** SmallPlan: Leverage Small Language Models for Sequential Path Planning with Simulation-Powered, LLM-Guided Distillation\n**Authors:** Quang P. M. Pham, Khoi T. N. Nguyen, et al.\n**Abstract excerpt:** Trains lightweight Small Language Models to navigate across scene graphs representing 3D scenes, using simulation-powered supervised fine-tuning and reinforcement learning. The SLMs perform competitively with GPT-4o on sequential path planning.\n\n## 4. arXiv:2108.01176 (August 2021)\n**Title:** Hierarchical Representations and Explicit Memory: Learning Effective Navigation Policies on 3D Scene Graphs using Graph Neural Networks\n**Authors:** Zachary Ravichandran, Lisa Peng, Nathan Hughes, J. Daniel Griffith, Luca Carlone\n**Abstract excerpt:** Presents a reinforcement learning framework using high-level 3D scene graph hierarchies with a graph neural network architecture, embedding scene graphs into agent-centric feature space for object search tasks. Accepted at ICRA 2022.\n\n## 5. arXiv:2005.02153 (May 2020)\n**Title:** Improving Target-driven Visual Navigation with Attention on 3D Spatial Relationships\n**Authors:** Yunlian Lv, Ning Xie, Yimin Shi, Zijiao Wang, Heng Tao Shen\n**Abstract excerpt:** Investigates target-driven visual navigation using deep reinforcement learning with attention on 3D knowledge graphs and graph convolutional networks encoding spatial relationships. Experiments in AI2-THOR show improved generalization across targets and scenes.\n\n---\n\n**Note:** Papers 1-3 fall within the 2024-2026 window requested. Papers 4-5 (2021 and 2020) are included as they directly address 3D scene graph representations with reinforcement learning for navigation, though they predate the specified range."
+          },
+          {
+            "id": "call_019ee930bed27a2291c54de1",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?searchtype=all&query=failure+recovery+backtracking+reinforcement+learning+navigation&start=0",
+              "prompt": "Extract all paper titles, arXiv IDs, and brief abstracts about failure recovery, backtracking, or error correction in navigation using reinforcement learning. Focus on papers from 2024-2026."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Based on the content provided, the arXiv search results page indicates:\n\n**\"Sorry, your query for all: failure recovery backtracking reinforcement learning navigation produced no results.\"**\n\nThe page contains no paper titles, arXiv IDs, or abstracts related to failure recovery, backtracking, or error correction in navigation using reinforcement learning. There are no papers listed from 2024-2026 or any other time period matching your criteria.\n\nThe page only contains general search help documentation, tips on searching by author name, subcategory, wildcards, expressions, phrases, dates, and journal references—but no actual paper results.\n\nIf you'd like to find relevant papers, you may need to:\n- Broaden your search terms (e.g., searching individual terms rather than combining all of them)\n- Try the Advanced Search feature with different field combinations\n- Use related terminology such as \"fault tolerance,\" \"error recovery,\" \"robust navigation,\" or \"RL navigation\""
+          },
+          {
+            "id": "call_019ee930bed27a2291c54df3",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?searchtype=all&query=cross+embodiment+transfer+vision+language+navigation&start=0",
+              "prompt": "Extract all paper titles, arXiv IDs, and brief abstracts about cross-embodiment transfer for vision-language navigation. Focus on papers from 2024-2026."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Here are the papers from 2024-2026 related to cross-embodiment transfer for vision-language navigation:\n\n1. **arXiv:2505.06111** - \"UniVLA: Learning to Act Anywhere with Task-centric Latent Actions\"\nA generalist framework using latent action models to learn cross-embodiment VLA policies from videos, achieving SOTA on manipulation and navigation benchmarks with less compute than OpenVLA.\n\n2. **arXiv:2409.02389** - \"Multi-modal Situated Reasoning in 3D Scenes\"\nIntroduces MSQA (251K QA pairs) and MSNN benchmark for situated reasoning in 3D scenes, with experiments on data scaling and cross-domain transfer.\n\n3. **arXiv:2406.19236** - \"Human-Aware Vision-and-Language Navigation: Bridging Simulation to Reality with Dynamic Human Interactions\"\nProposes HA-VLN with dynamic human activities, the HA3D simulator, and HA-R2R dataset, addressing sim2real transfer for VLN in human-populated environments.\n\n4. **arXiv:2402.15852** - \"NaVid: Video-based VLM Plans the Next Step for Vision-and-Language Navigation\"\nA video-based VLM using only RGB camera input to output navigation actions, demonstrating cross-dataset and Sim2Real transfer without maps, odometers, or depth inputs.\n\n**Note:** The other results (arXiv:2606.01241, 2605.19420, 2604.04664, 2603.28691, 2505.02388) address related themes like cross-embodiment transfer, VLA models, or navigation, but I excluded them as they're either not primarily about VLN cross-embodiment transfer, or are not explicitly tagged in the same way. Let me know if you'd like summaries of those included as well."
+          },
+          {
+            "id": "call_019ee930bed27a2291c54e0a",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?searchtype=all&query=memory+retrieval+augmented+long+horizon+navigation+reinforcement+learning&start=0",
+              "prompt": "Extract all paper titles, arXiv IDs, and brief abstracts about memory retrieval, episodic memory, or experience replay augmented navigation agents using reinforcement learning. Focus on papers from 2024-2026."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Based on the search results above, here are the relevant papers:\n\n**Paper 1:**\n\n- **Title:** STAMP: Training Explicit Memory for Mobile GUI Agents in Controllable and Scalable Virtual Environments\n- **arXiv ID:** 2605.29324\n- **Submitted:** May 2026\n- **Authors:** Junyang Wang, Haiyang Xu, Xi Zhang, Zhaoqing Zhu, Ming Yan, Jieping Ye, Jitao Sang\n- **Abstract summary:** This paper addresses how mobile GUI agents fail at \"long-horizon tasks that require memory\" due to limited context windows conflicting with token-heavy screenshots. The authors present STAMP, a framework that \"trains explicit memory in mobile agents through controllable virtual environments,\" where \"deterministic memory variables are programmatically injected into synthesized tasks\" to control memorization and retrieval. The approach enables \"online reinforcement learning through environment-driven reward feedback.\" The resulting Stamp-GUI agent \"achieves state-of-the-art performance among GUI-specialized models\" on their Memory-World benchmark.\n\nThis is the only paper returned by the search query \"memory retrieval augmented long horizon navigation reinforcement learning\" on arXiv, showing 1 of 1 results."
+          },
+          {
+            "id": "call_019ee930bed27a2291c54e10",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?searchtype=all&query=safe+exploration+constrained+reinforcement+learning+mobile+robot&start=0",
+              "prompt": "Extract all paper titles, arXiv IDs, and brief abstracts about safety-critical or constraint-based reinforcement learning for navigation or mobile robots. Focus on papers from 2024-2026."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Here are the papers from the search results (2024–2026) on safe/constrained reinforcement learning for navigation or mobile robots:\n\n**1. SafeVLA: Towards Safety Alignment of Vision-Language-Action Model via Constrained Learning**\n- arXiv ID: 2503.03480\n- Abstract: \"Vision-language-action models (VLAs) show potential as generalist robot policies. However, these models pose extreme safety challenges during real-world deployment, including the risk of harm to the environment, the robot itself, and humans. How can safety constraints be explicitly integrated into VLAs?\" The paper explores an integrated safety approach using constrained MDPs, reducing cumulative cost of safety violations by 83.58% compared to state-of-the-art, evaluated on \"long-horizon mobile manipulation tasks.\"\n\n**2. A novel agent with formal goal-reaching guarantees: an experimental study with a mobile robot**\n- arXiv ID: 2409.14867\n- Abstract: Introduces \"Critic As Lyapunov Function (CALF),\" a safe model-free RL agent. The work \"showcases how CALF can be used to improve upon control baselines in robotics\" with formal goal-reaching guarantees. Experiments used a \"non-holonomic wheeled mobile robot (WMR) TurtleBot3 Burger,\" demonstrating superiority over PPO and a modified SARSA.\n\n**3. Safe Reinforcement Learning in a Simulated Robotic Arm**\n- arXiv ID: 2312.09468 (announced December 2023, revised February 2024)\n- Abstract: Extends safe RL algorithms using a \"customized environment with Panda robotic arm where Safety Gym algorithms can be tested.\" The work notes \"the constrained version is able to learn the equally good policy while better complying with safety constraints.\" (Note: focused on a robotic arm, not mobile robot navigation, but addresses safe exploration in robotics.)"
+          },
+          {
+            "id": "call_019ee930fd407c3386a3ef20",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?searchtype=all&query=backtracking+error+correction+navigation+agent&start=0",
+              "prompt": "Extract all paper titles, arXiv IDs, and brief abstracts about explicit memory mechanisms like episodic memory, scratchpads, or memory banks for embodied agents or navigation. Focus on papers from 2024-2026."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "# Papers on Memory Mechanisms for Embodied Agents/Navigation (2024-2026)\n\n## 1. Uni-LaViRA (arXiv:2605.27582)\n**Title:** Uni-LaViRA: Language-Vision-Robot Actions Translation for Unified Embodied Navigation\n\n**Abstract excerpt:** Presents a unified agentic architecture using a \"TODO List Memory (TDM)\" that rewrites structured checklists of pending sub-goals at every step, reciting unfinished items back into the agent's attention window. Includes \"Second Chance Backtrack (SCB)\" that rolls the robot back to pre-error states for self-correction.\n\n**Submitted:** May 2026\n\n---\n\n## 2. WebOperator (arXiv:2512.12692)\n**Title:** WebOperator: Action-Aware Tree Search for Autonomous Agents in Web Environment\n\n**Abstract excerpt:** Introduces a tree-search framework with a robust backtracking mechanism that verifies feasibility of previously visited paths before replay. Uses best-first search ranking actions by reward and safety, with diverse reasoning contexts for exploration.\n\n**Submitted:** December 2025\n\n---\n\n## 3. EventNav / VLN-EventKG (arXiv:2408.02535)\n**Title:** Towards Coarse-grained Visual Language Navigation Task Planning Enhanced by Event Knowledge Graph\n\n**Abstract excerpt:** Proposes a dynamic history backtracking module to correct potential error action planning in real time for coarse-grained VLN instructions, using event knowledge graph enhancement through small and large language model collaboration.\n\n**Submitted:** August 2024\n\n---\n\n**Note:** None of these three papers explicitly describe \"episodic memory,\" \"scratchpads,\" or \"memory banks\" as named mechanisms. They focus on backtracking and structured planning memory (checklists, search trees, knowledge graphs)."
+          },
+          {
+            "id": "call_019ee930fd407c3386a3ef38",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?searchtype=all&query=dynamic+obstacle+avoidance+navigation+language+grounded&start=0",
+              "prompt": "Extract all paper titles, arXiv IDs, and brief abstracts about dynamic environments or moving obstacles in vision-language navigation. Focus on papers from 2024-2026."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "# Papers on Dynamic Obstacle Avoidance in Vision-Language Navigation (2024-2026)\n\n## 1. Hierarchical Semantic-Augmented Navigation (HSAN)\n- **arXiv ID:** 2606.01565\n- **Authors:** Xiang Fang, Wanlong Fang, Changshuo Wang\n- **Abstract focus:** Introduces a framework for VLN-CE that uses a dynamic hierarchical semantic scene graph and optimal transport-based topological planning. A reinforcement learning policy handles low-level control and obstacle avoidance.\n\n## 2. From Woofs to Words: Towards Intelligent Robotic Guide Dogs\n- **arXiv ID:** 2603.12574\n- **Authors:** Yohei Hayamizu et al.\n- **Abstract focus:** Addresses grounding language in dynamically changing environments for assistive quadruped robots. Uses LLMs to verbalize navigational plans and scenes for obstacle avoidance.\n\n## 3. VLN-Pilot: Large Vision-Language Model as an Autonomous Indoor Drone Operator\n- **arXiv ID:** 2602.05552\n- **Authors:** Bessie Dominguez-Dager et al.\n- **Abstract focus:** Enables context-aware indoor drone navigation via VLLMs, reasoning about spatial relationships, obstacle avoidance, and dynamic reactivity to unforeseen events.\n\n## 4. DualVLN: Ground Slow, Move Fast\n- **arXiv ID:** 2512.08186\n- **Authors:** Meng Wei et al.\n- **Abstract focus:** A dual-system VLN foundation model combining a VLM global planner with a diffusion policy for real-time control and adaptive decision-making in dynamic environments.\n\n## 5. Mem4Nav: Hierarchical Spatial-Cognition Long-Short Memory System\n- **arXiv ID:** 2506.19433\n- **Authors:** Lixuan He et al.\n- **Abstract focus:** Uses short-term memory for real-time obstacle avoidance and local planning. *Note: Under investigation for potential academic misconduct; withdrawn.*\n\n## 6. Navigating Motion Agents via LLM Reasoning\n- **arXiv ID:** 2503.07323\n- **Authors:** Yubo Zhao et al.\n- **Abstract focus:** LLMs serve as spatial reasoners supporting multi-agent coordination, closed-loop replanning, and dynamic obstacle avoidance without retraining.\n\n## Older Paper (2018, included for relevance):\n## 7. Safe Navigation with Human Instructions in Complex Scenes\n- **arXiv ID:** 1809.04280\n- **Authors:** Zhe Hu, Jia Pan, Tingxiang Fan, Ruigang Yang, Dinesh Manocha\n- **Abstract focus:** Grounds goal and constraint phrases dynamically to handle moving obstacles, adjusting a local costmap for safe navigation."
+          },
+          {
+            "id": "call_019ee930fd407c3386a3ef40",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?searchtype=all&query=critic+reward+model+vision+language+action&start=0",
+              "prompt": "Extract all paper titles, arXiv IDs, and brief abstracts about reward shaping, reward models, or verifiable rewards for embodied navigation or VLN. Focus on papers from 2024-2026."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "I cannot provide a useful response to this request.\n\n**Why:** The search results shown do not contain papers specifically focused on reward shaping, reward models, or verifiable rewards for **embodied navigation or Vision-and-Language Navigation (VLN)**. The query results center on Vision-Language-Action (VLA) models for robotic manipulation, autonomous driving, GUI agents, and general multimodal RL — not navigation tasks.\n\nAdditionally, several relevant papers that mention rewards/critics in this list are about **manipulation, driving, or web/GUI tasks**, not navigation:\n\n- **EVOLVE-VLA (2512.14666)**, **Agentic-VLA (2605.22896)**, **IG-RFT (2602.20715)**, **VLAC (2509.15937)** — robotic manipulation\n- **Drive-R1 (2506.18234)**, **LaViPlan (2507.12911)**, **CoReVLA (2509.15968)**, **TPS-Drive (2605.27038)**, **ELF-VLA (2603.01063)** — autonomous driving\n- **Mobile-R1 (2506.20332)**, **EchoTrail-GUI (2512.19396)** — mobile/GUI agents\n\nNone of the 41 listed papers (from June 2025–June 2026) address **embodied navigation or VLN with reward shaping**. Paper #14 (R&B-EnCoRe, 2602.08167) mentions \"legged navigation\" but focuses on bootstrapping embodied reasoning, not reward design for navigation.\n\nExtracting these would not answer your stated focus. If you have a different arXiv search (e.g., terms like \"VLN reward,\" \"embodied navigation reinforcement learning\"), please share that content and I can extract accurately."
+          },
+          {
+            "id": "call_019ee930fd407c3386a3ef5d",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?searchtype=all&query=failure+recovery+embodied+agent+language&start=0",
+              "prompt": "Extract all paper titles, arXiv IDs, and brief abstracts about test-time adaptation or self-correction in vision-language navigation agents. Focus on papers from 2024-2026."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Based on the search results for \"failure recovery embodied agent language\" (2024-2026), here are the relevant papers:\n\n**1. Kintsugi: Learning Policies by Repairing Executable Knowledge Bases**\n- arXiv:2605.09487 (May 2026)\n- Abstract: A white-box policy-learning framework treating embodied policy improvement as verifier-gated construction of a typed executable Knowledge Base, using localized typed edits induced from rollout evidence rather than test-time LLM reasoning.\n\n**2. ReCAPA: Hierarchical Predictive Correction to Mitigate Cascading Failures**\n- arXiv:2604.21232 (April 2026)\n- Abstract: Uses prediction and contrast to adjust deviations across action, subgoal, and trajectory levels in Vision-Language-Action systems, with new metrics quantifying \"error propagation and recovery processes in tasks.\"\n\n**3. Environmental Understanding Vision-Language Model for Embodied Agent**\n- arXiv:2604.19839 (April 2026)\n- Abstract: Fine-tunes VLMs on four core skills including \"a recovery step that leverages these core skills\" plus GRPO refinement, achieving 8.86% improvement on ALFRED tasks.\n\n**4. Goal2Skill: Long-Horizon Manipulation with Adaptive Planning and Reflection**\n- arXiv:2604.13942 (April 2026)\n- Abstract: Dual-system framework with VLM-based planner performing \"outcome verification, and error-driven correction\" enabling \"robust online recovery.\"\n\n**5. A Physical Agentic Loop for Language-Guided Grasping with Execution-State Monitoring**\n- arXiv:2604.07395 (April 2026)\n- Abstract: \"Bounded embodied agent\" with Watchdog layer converting telemetry into discrete outcomes, consumed by \"deterministic bounded policy that finalizes, retries, or escalates.\"\n\n**6. ProCeedRL: Process Critic with Exploratory Demonstration RL**\n- arXiv:2604.02006 (April 2026)\n- Abstract: Process-level critic monitoring interactions \"to guide agents in stopping the accumulation of errors\" through reflective demonstrations.\n\n**7. DarkQA: Benchmarking VLMs in Low-Light Indoor Scenes**\n- arXiv:2512.24985 (December 2025)\n- Abstract: Evaluates perceptual failures with LLIE providing \"severity-dependent but unstable recovery.\"\n\n**8. Training-free Generation of Temporally Consistent Rewards from VLMs**\n- arXiv:2507.04789 (July 2025)\n- Abstract: T²-VLM generates rewards via Bayesian tracking of VLM-derived subgoals, \"enhances long-horizon decision-making and improves failure recovery capabilities.\"\n\n**9. VLM Can Be a Good Assistant: Enhancing Embodied Visual Tracking**\n- arXiv:2505.20718 (May 2025)\n- Abstract: Self-improving framework activating VLM reasoning \"only upon failure detection,\" boosting success rates by 72% with RL-based approaches.\n\n**10. Enhancing Robustness in Language-Driven Robotics**\n- arXiv:2411.05474 (November 2024)\n- Abstract: Modular architecture with \"feedback mechanism to enable real-time error recovery\" within goal-conditioned POMDP framework.\n\n**11. PARTNR: A Benchmark for Planning and Reasoning in Embodied Multi-agent Tasks**\n- arXiv:2411.00081 (November 2024)\n- Abstract: Reveals \"failures in task tracking and recovery from errors\" across 100,000 natural language tasks.\n\n**12. Tools Fail: Detecting Silent Errors in Faulty Tools**\n- arXiv:2406.19228 (June 2024)\n- Abstract: Framework for detecting silent tool errors with \"initial approach to failure recovery\" validated on embodied agent planning."
+          },
+          {
+            "id": "call_019ee931fe4f7201b360469b",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?searchtype=all&query=episodic+memory+RL+navigation+long+horizon&start=0",
+              "prompt": "Extract all paper titles, arXiv IDs, and brief abstracts about world model based reinforcement learning for embodied navigation or planning. Look for papers that use learned dynamics models for rollout or planning, particularly in 2025-2026."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "The web page content provided is an arXiv search results page showing that the query \"episodic memory RL navigation long horizon\" produced **no results**.\n\nThere are no paper titles, arXiv IDs, or abstracts on this page to extract. The page only contains:\n\n- Search interface elements\n- A \"Sorry, your query for all: episodic memory RL navigation long horizon produced no results\" message\n- General search tips and documentation\n\nSince no papers matching your criteria (world model based reinforcement learning for embodied navigation or planning, particularly 2025-2026) are present in the content provided, I cannot extract any relevant information."
+          },
+          {
+            "id": "call_019ee931fe4f7201b36046a0",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?searchtype=all&query=foundation+model+safe+navigation+constraint&start=0",
+              "prompt": "Extract all paper titles, arXiv IDs, and brief abstracts about safe RL, constrained MDP, or formal safety guarantees for embodied AI or robot navigation. Focus on 2024-2026."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "API Error: Request rejected (429) · 已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)"
+          },
+          {
+            "id": "call_019ee931fe4f7201b36046b2",
+            "name": "WebFetch",
+            "input": {
+              "url": "https://arxiv.org/search/?searchtype=all&query=curriculum+learning+hierarchical+VLN+navigation&start=0",
+              "prompt": "Extract all paper titles, arXiv IDs, and brief abstracts about curriculum learning or hierarchical reinforcement learning for Vision-Language Navigation. Focus on 2024-2026."
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "API Error: Request rejected (429) · 已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)"
+          }
+        ],
+        "asyncStatus": "completed",
+        "agentId": "a76ef2bfc41f3b055",
+        "result": "Note: claude-sonnet-4-6 (the safety classifier) was unavailable when reviewing this subagent's work. Please carefully verify the subagent's actions and output before acting on them.\n\nAPI Error: Request rejected (429) · 已达到 Token Plan 用量上限：请升级 Token Plan 套餐或购买积分补充用量。 (2056)"
+      }
+    }
+  },
+  "currentNote": "RL-VLN/Zhang 等 - 2025 - ActiveVLN Towards Active Exploration via Multi-Turn RL in Vision-and-Language Navigation.pdf",
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 74,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 93803,
+    "contextWindow": 200000,
+    "contextTokens": 93877,
+    "percentage": 47,
+    "contextWindowIsAuthoritative": true
+  }
+}
