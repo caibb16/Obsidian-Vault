@@ -103,13 +103,14 @@
 **1. 信源熵 (Entropy)**
 
 - 离散无记忆信源 (DMS): $H(X) = -\sum_{i} P(x_i) \log_2 P(x_i)$ (单位: bits/symbol)。
+  - example：高斯随机变量的熵为 $H(X) = \frac{1}{2} \log_2(2\pi e \sigma^2)$。
     
 - 极值性: $H(X) \le \log_2 n$ (等概率时取等号)。
     
 - 若 $Y = g(X)$ 且 $g$ 为确定性函数，则 $H(Y) \le H(X)$ (只有当 $g$ 是一对一映射时取等号)。
 
 - 条件熵: $H(X|Y) = H(X,Y) - H(Y)= H(X) - H(X|Y)$，条件熵 $H(X|Y)$ 表示在已知 $Y$ 的情况下对 $X$ 的不确定性。
-  $$H(X|Y) = -\sum_{i,j} P(x_i,y_j) \log_2 P(x_i|y_j)$$
+  - $$H(X|Y) = -\sum_{i,j} P(x_i,y_j) \log_2 P(x_i|y_j)$$
     
 
 **2. 哈夫曼编码 (Huffman Coding)**
@@ -136,7 +137,7 @@
     
 - **二进制对称信道 (BSC, 错误率p):** 容量 $C = 1 - H_b(p) = 1 + p\log_2 p + (1-p)\log_2(1-p)$。
     
-- **AWGN 连续信道 (Shannon 公式):** $C = B \log_2\left(1 + \frac{S}{N}\right)$。
+- **AWGN 连续信道 (Shannon 公式):** $C = B \log_2\left(1 + \frac{S}{N}\right)= B \log_2\left(1 + \frac{P}{N_0W}\right)$。
     
 - 对于特定的不对称转移矩阵，利用输出简并对称性假设 $P(x)$ ，使得 $H(Y)$ 最大，计算 $C$。
     
