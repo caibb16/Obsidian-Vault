@@ -212,3 +212,136 @@
 - **状态图与网格图 (Trellis):** 记忆深度为 $K$，状态数为 $2^{K-1}$。
     
 - **Viterbi 解码算法:** 基于最大似然序列估计，通过网格图逐步计算路径度量 (Path Metric, 如汉明距离)，并在每个状态节点**保留累积距离最小（最可能）的幸存路径** (Surviving Path)，丢弃其他路径。
+
+
+# 《数字通信》期末半开卷考试终极冲刺材料（第9-16章）
+
+---
+
+## 📡 第一部分：频域与带限信道传输（第9、10、11章）
+
+### 一、 奈奎斯特第一准则（无 ISI 方案）
+1. **时域条件**：抽样时刻无码间串扰（ISI）：
+   $$x(nT_s) = \begin{cases} 1, & n=0 \\ 0, & n \neq 0 \end{cases}$$
+2. **频域条件**（等效平移叠加为常数）：
+   $$\sum_{m=-\infty}^{\infty} X\left(f - \frac{m}{T_s}\right) = T_s$$
+3. **升余弦滚降滤波器 (Raised Cosine Filter)**：
+   * **绝对带宽**：$B = \frac{1+\alpha}{2T_s} = \frac{R_s(1+\alpha)}{2}$（其中 $\alpha$ 为滚降系数，$0 \le \alpha \le 1$）。
+   - $\alpha=0$ 时为理想矩形低通（奈奎斯特最小带宽 $B_0 = \frac{1}{2T_s}$）；$\alpha=1$ 时带宽加倍。
+   * **频带利用率**：$\eta = \frac{R_s}{B} = \frac{2}{1+\alpha} \text{ (Baud/Hz)}$。
+
+### 二、 部分响应系统 (Partial Response Signaling)
+* **核心思想**：人为、受控地在相邻码元间引入 ISI，使绝对带宽严格控制在奈奎斯特带宽 $B = \frac{1}{2T_s}$，以此达到理论极限的频谱利用率（$2 \text{ Baud/Hz}$）。
+* **双二进制信号 (Duobinary / Class I)**：
+   * **预编码 (Precoding)**：为防止接收端解调时出现**差错传播 (Error Propagation)**，发送端在映射前先进行模2加运算：
+     $$b_k = a_k \oplus b_{k-1} \pmod 2 \quad (a_k \in \{0,1\})$$
+   * **电平映射**：$c_k = 2b_k - 1 \in \{-1, +1\}$。
+   * **接收端采样值**：$I_k = c_k + c_{k-1} \in \{-2, 0, +2\}$。
+   * **判决规则**：若 $I_k = \pm 2$，则判 $\hat{a}_k = 0$；若 $I_k = 0$，则判 $\hat{a}_k = 1$。
+
+### 三、 自适应均衡器准则（最大似然、最小均方误差）
+1. **峰值畸变准则与迫零 (ZF) 均衡器**：
+   * **原理**：完全消除 ISI，满足 $C(f) = \frac{1}{X(f)}$。
+   * **缺点**：会产生**噪声放大效应 (Noise Enhancement)**，在信道传输函数存在深谱零点时性能极差。
+2. **最小均方误差 (MMSE) 均衡器准则**：
+   * **目标**：在最小化 ISI 的同时抑制加性噪声。代价函数为 $J = E[|e_k|^2] = E[|I_k - \hat{I}_k|^2]$。
+   * **正交性原理**：误差矢量与输入矢量正交 $E[e_k \mathbf{v}_{k-m}^*] = 0$，由此推导出 **Wiener-Hopf 方程**：$\sum_{j=-N}^{N} c_j \Gamma_{m-j} = \xi_m$。
+3. **判决反馈均衡器 (DFE)**：
+   * 由前向滤波器 (FFF) 和反馈滤波器 (FBF) 组成。利用已判决符号消除拖尾 ISI，**绝对不放大噪声**。
+
+### 四、 OFDM（正交频分复用）系统
+1. **系统框图与原理**：
+   * **发送端**：输入数据 $\to$ 串并变换 $\to$ 星座映射 $\to$ **IFFT 调制** $\to$ **加循环前缀 (CP)** $\to$ D/A $\to$ 射频发送。
+   * **接收端**：射频接收 $\to$ A/D $\to$ **去循环前缀 (CP)** $\to$ **FFT 解调** $\to$ 均衡/解映射 $\to$ 并串变换 $\to$ 输出。
+   * **正交性条件**：子载波间隔 $\Delta f = \frac{1}{T_{sub}}$（$T_{sub}$ 为有效符号周期）。
+2. **循环前缀 (CP) 的指标与计算**：
+   * **构造条件**：CP 的时间长度 $T_{cp}$ 必须大于信道的最大多径时延扩展 $\tau_{max}$（即 $T_{cp} > \tau_{max}$）。
+   * **作用**：将信道的线性卷积转化为循环卷积，消除码间串扰 (ISI) 与子载波间干扰 (ICI)。
+   * **总符号周期**：$T_{total} = T_{sub} + T_{cp}$。
+   * **功率/频谱效率损失因子**：$\eta_{loss} = \frac{T_{sub}}{T_{sub} + T_{cp}}$。
+
+---
+
+## ⏳ 第二部分：时域与衰落信道传输（第13、14章）
+
+### 一、 衰落信道定义与参数分类
+1. **时延扩展与相干带宽**（定义时域选择性）：
+   * 多径时延扩展为 $\tau_{max}$，相干带宽 $B_c \approx \frac{1}{\tau_{max}}$。
+   * **平坦衰落 (Flat Fading)**：信号带宽 $B \ll B_c$（时域码元周期 $T_s \gg \tau_{max}$），无 ISI。
+   * **频率选择性衰落**：信号带宽 $B \gg B_c$（时域码元周期 $T_s \ll \tau_{max}$），产生严重 ISI。
+2. **多普勒扩展与相干时间**（定义时变特性）：
+   * 最大多普勒频移 $f_d = \frac{v}{\lambda}$，相干时间 $T_c \approx \frac{1}{f_d}$。
+   * **慢衰落 (Slow Fading)**：码元周期 $T_s \ll T_c$，信道在一个或多个码元周期内恒定。
+   * **快衰落 (Fast Fading)**：码元周期 $T_s \gg T_c$，信道在单码元周期内剧烈变化，导致载波相位无法追踪。
+
+### 二、 衰落信道容量
+1. **遍历容量 (Ergodic Capacity)**（长时延编码，经历所有信道状态）：
+   $$C_{ergodic} = E_H \left[ B \log_2 \left( 1 + \frac{P |h|^2}{N_0 B} \right) \right]$$
+   * **遍历 CSI 分配**：若收发两端均已知 CSI，采用 **水注法 (Water-filling)** 动态分配功率：信道好时多发，信道差时少发或不发。
+2. **中断容量 (Outage Capacity)**：适用于慢衰落、时延受限系统。
+   $$P_{out} = \Pr \left( B \log_2(1 + \gamma |h|^2) < R_{target} \right)$$
+
+### 三、 接收机设计与误码率（$P_e$）分析
+1. **AWGN 最佳接收机**：由**匹配滤波器 (MF)**（冲激响应 $h(t) = s^*(T-t)$）或相关器进行理想采样，再进行门限判决。
+2. **AWGN 信道瞬时误码率**（以 BPSK 为例）：
+   $$P_e(\gamma) = Q\left(\sqrt{2\gamma}\right)$$
+3. **瑞利衰落信道平均误码率（对信噪比积分）**：
+   * 瑞利衰落下的瞬时信噪比 $\gamma$ 服从指数分布：$p(\gamma) = \frac{1}{\bar{\gamma}} e^{-\frac{\gamma}{\bar{\gamma}}}$（$\bar{\gamma}$ 为平均信噪比）。
+   * **积分推导与性能劣化**：
+     $$\bar{P}_e = \int_0^{\infty} P_e(\gamma) p(\gamma) d\gamma = \int_0^{\infty} Q\left(\sqrt{2\gamma}\right) \frac{1}{\bar{\gamma}} e^{-\frac{\gamma}{\bar{\gamma}}} d\gamma = \frac{1}{2} \left( 1 - \sqrt{\frac{\bar{\gamma}}{1+\bar{\gamma}}} \right) \approx \frac{1}{4\bar{\gamma}} \quad (\bar{\gamma} \gg 1)$$
+   * **重要结论**：AWGN 信道中误码率随信噪比呈**指数下降**；而瑞利衰落信道中由于缺乏多径分集，误码率仅随信噪比呈**线性倒数下降**（性能大幅度恶化，曲线变平缓）。
+
+---
+
+## 🌌 第三部分：空域与多天线系统（第15章）
+
+### 一、 MIMO 容量公式含义与证明
+1. **容量数学公式**：
+   $$C = B \log_2 \det \left( \mathbf{I}_{N_r} + \frac{\rho}{N_t} \mathbf{H}\mathbf{H}^H \right)$$
+   * **参数含义**：$\mathbf{H}$ 为 $N_r \times N_t$ 的信道矩阵，$\mathbf{I}_{N_r}$ 为单位矩阵，$\rho$ 为总接收信噪比。
+2. **公式证明与奇异值分解 (SVD)**：
+   * 对信道矩阵进行 SVD 分解：$\mathbf{H} = \mathbf{U} \mathbf{\Sigma} \mathbf{V}^H$。
+   * 带入行列式公式，利用 $\det(\mathbf{I} + \mathbf{A}\mathbf{B}) = \det(\mathbf{I} + \mathbf{B}\mathbf{A})$ 展开，可将 MIMO 信道解耦为 $r = \text{rank}(\mathbf{H}) \le \min(N_t, N_r)$ 个**独立的并行子信道**：
+     $$C = \sum_{i=1}^{r} B \log_2 \left( 1 + \frac{\rho}{N_t} \lambda_i \right)$$
+     （其中 $\lambda_i = \sigma_i^2$ 为 $\mathbf{H}\mathbf{H}^H$ 的非零特征值）。
+   * **结论**：在高信噪比（$\rho \to \infty$）下，MIMO 容量随天线数呈**线性增长增益（空间复用增益）**。
+
+### 二、 MIMO 接收机算法对比 (ML / MSE)
+设接收信号矢量 $\mathbf{y} = \mathbf{H}\mathbf{x} + \mathbf{n}$：
+1. **最大似然 (ML) 接收机（非线性）**：
+   - 算法：$\hat{\mathbf{x}} = \arg\min_{\mathbf{x}} \|\mathbf{y} - \mathbf{H}\mathbf{x}\|^2$。
+   - 特点：性能最佳，能获得满分集增益，但复杂度随天线数呈指数爆炸增长。
+2. **迫零 (ZF) 接收机（线性）**：
+   - 算法：乘以伪逆 $\mathbf{G}_{ZF} = (\mathbf{H}^H \mathbf{H})^{-1} \mathbf{H}^H$。完全消除干扰，但会导致**噪声放大**。
+3. **最小均方误差 (MMSE) 接收机（线性）**：
+   - 算法：$\mathbf{G}_{MMSE} = \left( \mathbf{H}^H \mathbf{H} + \frac{N_0}{E_s} \mathbf{I} \right)^{-1} \mathbf{H}^H$。
+   - 特点：在消除天线间干扰和抑制噪声放大之间取得最佳折中。
+
+### 三、 分集阶数与自由度 (DoF)
+1. **分集自由度 / 空间复用增益 (DoF)**：
+   $$\text{DoF} = \lim_{\rho \to \infty} \frac{C(\rho)}{\log_2 \rho} = \min(N_t, N_r)$$
+   代表系统在空间中能够同时传输的独立数据流的最大几何数量。
+2. **最大分集阶数 (Diversity Order)**：
+   $$d_{max} = N_t \times N_r$$
+   代表相互独立的衰落路径总数。分集阶数越大，误码率曲线在高信噪比下的下降斜率越陡峭。
+
+---
+
+## 👥 第四部分：多用户通信（第16章）
+
+### 一、 多用户信道容量概念
+1. **多址接入信道 (MAC)**：多传一（上行链路，如多手机对单基站）。
+   * **双用户 MAC 容量域边界**：
+     $$R_1 \le B \log_2\left(1 + \frac{P_1}{N_0 B}\right), \quad R_2 \le B \log_2\left(1 + \frac{P_2}{N_0 B}\right)$$
+     $$R_1 + R_2 \le B \log_2\left(1 + \frac{P_1 + P_2}{N_0 B}\right)$$
+   * 两个用户独立分担总带宽容量。边界交点可以通过 **连续干扰消除 (SIC)** 接收机达到。
+2. **广播信道 (BC)**：一传多（下行链路，如单基站对多手机）。
+   * **脏纸编码 (DPC, Dirty Paper Coding)**：下行广播信道容量域的理论最优边界方案。其核心原理是：如果发送端能够预先获知干扰信号，则可以通过预编码发送信息，使接收端在完全不增加发射功率的前提下彻底消除该干扰。
+
+### 二、 多用户接收机检测技术
+1. **传统单用户检测 (SU-MUD)**：
+   * 将其他所有用户的信号均简单地视为**加性高斯白噪声干扰**。
+   * **缺点**：若多用户物理距离不等，会遭遇严重的**远近效应 (Near-Far Effect)**，基站附近的强信号会完全淹没远端用户的弱信号，必须依赖严格的功率控制。
+2. **多用户检测 (MUD) 接收机**：
+   * **线性检测（ZF-MUD / MMSE-MUD）**：利用解相关矩阵消除用户特征码（如 CDMA 序列）之间的多用户干扰 (MUI)。
+   * **连续干扰消除 (SIC) 接收机**：按照信号接收功率由大到小的顺序进行级联剥离。先判决并重构信号最强的用户，将其从总信号中减去（剔除干扰），再对次强的用户进行判决，以此类推。
