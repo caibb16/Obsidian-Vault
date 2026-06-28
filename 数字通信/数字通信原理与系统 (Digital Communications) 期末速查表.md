@@ -15,7 +15,7 @@
 - **WSS 三大条件:**  
     1) 均值为常数 $E[X(t)] = m_X$；
     
-    2) 自相关函数仅与时间间隔 $\tau$ 有关 $R_XX(t_1, t_2) = R_XX(\tau)$；
+    2) 自相关函数仅与时间间隔 $\tau$ 有关 $R_{XX}(t_1, t_2) = R_{XX}(\tau)$；
     
     3) 功率有限（方差有限）。
     
@@ -25,6 +25,9 @@
         
 
 **3. 带通与低通信号的关系**
+- **时域关系**：
+  - $x(t) = \text{Re}\{x_l(t) e^{j2\pi f_0 t}\}$，其中 $x_l(t)$ 为低通等效信号。
+  - $x_l(t) = 2x_+(t) e^{-j2\pi f_0 t}$,其中$x_+(t)=\frac{1}{2}x(t)+\frac{j}{2}\hat{x}(t)$ 
 - **频域关系**：$X(f) = \frac{1}{2} [X_l(f-f_0) + X_l^*(-f-f_0)]$，其中 $X_l(f)$ 为低通等效信号。
 - **能量关系**：带通信号 $x(t)$ 的能量是其低通等效信号 $x_l(t)$ 能量的**一半**，即$\mathcal{E}_x = \frac{1}{2} \mathcal{E}_{x_l}$。
 
@@ -53,7 +56,10 @@
     - 主瓣宽度 (Mainlobe width): $B_T = \frac{2}{T}$。
         
     - 频谱效率 (Spectral efficiency): $\eta = \frac{R_b}{B_T} = 0.5 \log_2 M$ (bps/Hz)。
-    - 功率谱密度 (Power Spectral Density): $S(f) = \frac{|G(f)|^2}{T}$。
+    - 功率谱密度 (Power Spectral Density):   
+   $$低通：S_{v_l}(f) = \frac{1}{T}|G(f)|^2 S_I(f)， S_I(f)\leftrightarrow R_I(m)=E(I_nI^*_{n+m})$$ 
+   $$带通：S_v(f) = \frac{1}{4}[S_{v_l}(f-f_0) + S_{v_l}(-f-f_0)]$$ 
+   $$矩形脉冲g(t)的频谱：G(f) = T \text{sinc}(fT)$$
         
 - **On-Off Signaling vs Antipodal (双极性):**
     
@@ -95,14 +101,15 @@
     
 - **二进制 正交信号 (Orthogonal):** $P_e = Q\left(\sqrt{\frac{E_b}{N_0}}\right)$。
     
-- **拉普拉斯噪声 (Laplacian) 下的判决:** $p(n) = \frac{1}{\sqrt{2}\sigma} e^{-\sqrt{2}|n|/\sigma}$，输入 $r = \pm A + n$ 时，最优判决门限仍为 0，错误概率为 $P_e = \frac{1}{2} e^{-\sqrt{2}A/\sigma}$。
+- **拉普拉斯噪声 (Laplacian) 下的判决:** $p(n) = \frac{1}{\sqrt{2}\sigma} e^{-\sqrt{2}|n|/\sigma}$，输入 $r = \pm A + n$ 时，最优判决门限仍为 0，错误概率为 $P_e = \frac{1}{2} e^{-\sqrt{2}A/\sigma}=\frac{1}{2}e^{-\sqrt{2SNR}}$。
     
+- **QAM 信号:** $P_e = 1-\left(1-2\left(1 - \frac{1}{\sqrt{M}}\right) Q\left(\sqrt{\frac{3E_blog_2M}{(M-1)N_0}}\right)\right)^2$  
 
 **4. 联合边界 (Union Bound)**
 
-- 对 M 元信号体系：$P_e \le \sum_{m=1}^M \sum_{m' \neq m} P(s_m) Q\left( \frac{d_{mm'}}{\sqrt{2N_0}} \right)$。
+- **对 M 元信号体系**：$P_e \le \sum_{m=1}^M \sum_{m' \neq m} P(s_m) Q\left( \frac{d_{mm'}}{\sqrt{2N_0}} \right)=(M-1)Q(\sqrt{\frac{d^2_{min}}{2N_0}})$
     
-- 重点关注最小距离 $d_{\min}$。
+- **平均能量**：$E_i=x_i^2+y_i^2,\   E_{avg}=\frac{1}{M}\sum\limits_{i=1}^M E_i,\  E_{bavg}=\frac{E_{avg}}{log_2M}$
     
 
 ## 四、 信息论基础 (Information Theory)
