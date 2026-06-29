@@ -86,14 +86,15 @@
 
 **2. 最佳检测准则**
 
-- **MAP准则 (最大后验概率):** $\hat{s} = \arg\max_{s_m} P(s_m | r)$。使发生错误的概率最小。
+- **MAP准则 (最大后验概率):** $\hat{m} = \arg\max\limits_{s_m} P(s_m | r)$，使发生错误的概率最小。
     
     - $P(s_m | r) = \frac{p(r | s_m) P(s_m)}{p(r)}$  
         
-- **ML准则 (最大似然):** 当所有符号等概率发送时 ($P(s_m) = 1/M$)，MAP 退化为 ML 准则：$\hat{s} = \arg\max_{s_m} p(r | s_m)$。
+- **ML准则 (最大似然):** $\hat{m} = \arg\max\limits_{s_m} p(r | s_m)$，当所有符号等概率发送时 ($P(s_m) = 1/M$)，MAP 退化为 ML 准则。
     
 - 高斯白噪声下的 ML 判决等价于**最小几何距离准则**: 选择使欧式距离 $|r - s_m|^2$ 最小的信号。
     
+- **加性噪声下的 MAP 判决:** 若$r=s_m+n$，则有$\hat{m} = \arg\max\limits_{s_m} P(s_m) P(r|s_m)=\arg\max\limits_{s_m} P(s_m) P(r-s_m|s_m)=\arg\max\limits_{s_m} P(s_m) P_n(r-s_m)$
 
 **3. 错误概率计算 (Error Probability)**
 
@@ -228,7 +229,7 @@
 - **Viterbi 解码算法:** 基于最大似然序列估计，通过网格图逐步计算路径度量 (Path Metric, 如汉明距离)，并在每个状态节点**保留累积距离最小（最可能）的幸存路径** (Surviving Path)，丢弃其他路径。
 
 
-# 《数字通信》期末半开卷考试终极冲刺材料（第9-16章）
+# 《数字通信》（第9-16章）
 
 ---
 
