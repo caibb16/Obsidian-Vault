@@ -5,7 +5,7 @@ MySQL服务器管理多个**数据库**（Database），每个数据库中包含
 
 ## 查询
 ### 基础查询
-
+增删改查：insert/delete/update/select
 ### 多表查询
 1. 内连接：$A\cap B$
 2. 外连接：$A + A \cap B$
