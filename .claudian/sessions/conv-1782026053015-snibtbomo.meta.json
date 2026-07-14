@@ -4,8 +4,8 @@
   "title": "Analyze RL-VLN papers for thesis innovation dir...",
   "titleGenerationStatus": "success",
   "createdAt": 1782026053016,
-  "updatedAt": 1782043869861,
-  "lastResponseAt": 1782043869861,
+  "updatedAt": 1784016415597,
+  "lastResponseAt": 1784016415597,
   "sessionId": "44bb591b-ba36-4c12-952d-426bb135583d",
   "providerState": {
     "providerSessionId": "44bb591b-ba36-4c12-952d-426bb135583d",
@@ -1127,12 +1127,12 @@
   "currentNote": "RL-VLN/Zhang 等 - 2025 - ActiveVLN Towards Active Exploration via Multi-Turn RL in Vision-and-Language Navigation.pdf",
   "usage": {
     "model": "sonnet",
-    "inputTokens": 74,
+    "inputTokens": 1522,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 93803,
+    "cacheReadInputTokens": 133120,
     "contextWindow": 200000,
-    "contextTokens": 93877,
-    "percentage": 47,
+    "contextTokens": 134642,
+    "percentage": 67,
     "contextWindowIsAuthoritative": true
   }
 }

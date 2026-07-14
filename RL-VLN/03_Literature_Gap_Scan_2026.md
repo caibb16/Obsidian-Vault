@@ -433,7 +433,7 @@ Constraints: collision rate, distance to obstacles, etc.
 
 ### 7.1 本周（1-2 天）
 - [x] 阅读 3 份方向对比文档（已完成）
-- [ ] 跑通 ActiveVLN baseline
+- [x] 跑通 ActiveVLN baseline
 - [ ] 列出 3-5 篇 SACA / SeeNav-Agent 必读论文（已在第 2 节列出）
 
 ### 7.2 接下来 2 周
