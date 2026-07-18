@@ -48,3 +48,4 @@ gap lock 的目的是防止幻读
 1. 记录存在：next-key lock 退化为 record lock
 2. 记录不存在：next-key lock 退化为 gap lock
 #### 唯一索引范围查询
+1. 记录不存在：二级索引 next-key lock 退化为 gap lock
