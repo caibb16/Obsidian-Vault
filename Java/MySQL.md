@@ -42,4 +42,5 @@ InnoDB中的B+树结构如下：
 ![[Pasted image 20260717112930.png]]
 ## 锁
 ### 行级锁加锁规则
-1. 唯一索引等值查询
+**加锁的对象是索引，加锁的基本单位是 next-key lock**，由record lock和gap lock组合而成
+#### 唯一索引等值查询
