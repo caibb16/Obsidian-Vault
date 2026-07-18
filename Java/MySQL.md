@@ -48,4 +48,7 @@ gap lock 的目的是防止幻读
 1. 记录存在：next-key lock 退化为 record lock
 2. 记录不存在：next-key lock 退化为 gap lock
 #### 唯一索引范围查询
-1. 记录不存在：二级索引 next-key lock 退化为 gap lock
+#### 非唯一索引等值查询
+存在两个索引：主键索引和非唯一索引，对这两个索引都加锁，但是对主键索引加锁的时候，只有满足查询条件的记录才会对它们的主键索引加锁。
+1. 记录不存在：二级索引 next-key lock 退化为 gap lock，主键索引不加锁
+2. 记录存在：
