@@ -43,7 +43,7 @@ InnoDB中的B+树结构如下：
 ## 锁
 ### 行级锁加锁规则
 **加锁的对象是索引，加锁的基本单位是 next-key lock（左开右闭）**，由 record lock 和 gap lock（左开右开） 组合而成
-gap lock 的目的是防止幻读
+gap lock 的目的是防止幻读，主要以**幻读角度去分析加锁规则**
 - 唯一索引等值查询
 	1. 记录存在：next-key lock 退化为 record lock
 	2. 记录不存在：next-key lock 退化为 gap lock
