@@ -44,13 +44,14 @@ InnoDB中的B+树结构如下：
 ### 行级锁加锁规则
 **加锁的对象是索引，加锁的基本单位是 next-key lock（左开右闭）**，由 record lock 和 gap lock（左开右开） 组合而成
 gap lock 的目的是防止幻读
-#### 唯一索引等值查询
-1. 记录存在：next-key lock 退化为 record lock
-2. 记录不存在：next-key lock 退化为 gap lock
-#### 唯一索引范围查询
-#### 非唯一索引等值查询
-存在两个索引：主键索引和非唯一索引，对这两个索引都加锁，但是对主键索引加锁的时候，只有满足查询条件的记录才会对它们的主键索引加锁。
-1. 记录不存在：二级索引 next-key lock 退化为 gap lock，主键索引不加锁
-2. 记录存在：扫描，扫描到的二级记录加 next-key lock，第一个不符合条件的next-key lock 退化为 gap lock，符合条件的记录的主键索引加记录锁
-#### 非唯一索引范围查询
-二级索引记录加 next-key lock
+- 唯一索引等值查询
+	1. 记录存在：next-key lock 退化为 record lock
+	2. 记录不存在：next-key lock 退化为 gap lock
+- 唯一索引范围查询
+- 非唯一索引等值查询
+	存在两个索引：主键索引和非唯一索引，对这两个索引都加锁，但是对主键索引加锁的时候，只有满足查询条件的记录才会对它们的主键索引加锁。
+	1. 记录不存在：二级索引 next-key lock 退化为 gap lock，主键索引不加锁
+	2. 记录存在：扫描，扫描到的二级记录加 next-key lock，第一个不符合条件的next-key lock 退化为 gap lock，符合条件的记录的主键索引加记录锁
+- 非唯一索引范围查询
+	二级索引记录加 next-key lock
+- 
