@@ -34,7 +34,7 @@ InnoDB中的B+树结构如下：
 ## 事务
 事务特性：原子性，一致性，隔离性，持久性
 ### MVCC（多版本并发控制）
-- 隐藏字段：trix_id，
+- 记录中的隐藏字段：trix_id(记录最近修改事务id)，roll_pointer
 - undo log：实现事务回滚，保障事务原子性；协同read view实现MVCC
 - read view
 ### 事务隔离级别
