@@ -36,7 +36,7 @@ InnoDB中的B+树结构如下：
 ### MVCC（多版本并发控制）
 - 记录中的隐藏字段：trix_id[^5]，roll_pointer[^6]
 - undo log：实现事务回滚，保障事务原子性；协同read view实现MVCC
-- read view
+- read view：快照规则，用来判断数据库中的某条记录哪个版本对当前事务可见
 ### 事务隔离级别
 - 读未提交：可以读到未提交的事务
 - 读提交：每次读取数据时都会生成一个新的Read View
