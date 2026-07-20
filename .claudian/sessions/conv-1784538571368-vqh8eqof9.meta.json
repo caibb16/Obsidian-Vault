@@ -4,20 +4,20 @@
   "title": "Analyze VLN papers for thesis innovation",
   "titleGenerationStatus": "success",
   "createdAt": 1784538571370,
-  "updatedAt": 1784539670386,
-  "lastResponseAt": 1784539670386,
+  "updatedAt": 1784541705437,
+  "lastResponseAt": 1784541705437,
   "sessionId": "817433d7-d742-4577-bba0-47f46772ebf7",
   "providerState": {
     "providerSessionId": "817433d7-d742-4577-bba0-47f46772ebf7"
   },
   "usage": {
     "model": "sonnet",
-    "inputTokens": 64,
+    "inputTokens": 1147,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 97152,
+    "cacheReadInputTokens": 99072,
     "contextWindow": 200000,
-    "contextTokens": 97216,
-    "percentage": 49,
+    "contextTokens": 100219,
+    "percentage": 50,
     "contextWindowIsAuthoritative": true
   }
 }
