@@ -18,7 +18,7 @@
 - `sleep()` 是 `Thread` 类的静态本地方法，`wait()` 则是 `Object` 类的本地方法。
 ### 死锁
 代码模拟如下：
-``` java
+```java
 public class DeadLockDemo {
     private static Object resource1 = new Object();//资源 1
     private static Object resource2 = new Object();//资源 2
