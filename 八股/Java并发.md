@@ -64,4 +64,4 @@ Thread[线程 1,5,main]waiting get resource2
 Thread[线程 2,5,main]waiting get resource1
 ```
 ### ThreadLocal
-通常创建的变量可以被多个线程fang'wen
+通常创建的变量可以被多个线程访问和修改，为了解决多线程环境下的数据竞争和安全问题，让每个线程有自己的专属本地变量，引入ThreadLocal类，
