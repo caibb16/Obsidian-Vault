@@ -63,3 +63,5 @@ Thread[线程 2,5,main]get resource2
 Thread[线程 1,5,main]waiting get resource2
 Thread[线程 2,5,main]waiting get resource1
 ```
+### ThreadLocal
+通常创建的变量可以被多个线程fang'wen
