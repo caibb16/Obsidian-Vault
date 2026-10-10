@@ -66,3 +66,31 @@ Thread[线程 2,5,main]waiting get resource1
 ### ThreadLocal
 通常创建的变量可以被多个线程访问和修改，为了解决多线程环境下的数据竞争和安全问题，让每个线程有自己的专属本地变量，引入`ThreadLocal`类，允许每个线程绑定自己的值。
 当你创建一个 `ThreadLocal` 变量时，每个访问该变量的线程都会拥有一个独立的副本。
+
+### JMM
+**JMM（Java 内存模型）** 是 JVM 规范定义的抽象规范，描述了线程之间共享变量的访问规则，以及变量在内存中存储和读取的底层细节，用于屏蔽不同硬件/OS 的内存访问差异，保证 Java 并发程序跨平台的一致性。
+
+**两大内存区域：**
+- **主内存**：所有线程共享的变量存储区域。
+- **工作内存**：每个线程私有的副本空间（类比 CPU 缓存+寄存器）。线程对变量的读写都在工作内存中完成，不能直接操作主内存。
+
+**三大特性：**
+- **原子性**：一组操作不可中断。`synchronized` / `Lock` / `Atomic*`。
+- **可见性**：一个线程修改后，其他线程能立即看到。`volatile` / `synchronized` / `final`。
+- **有序性**：禁止指令重排序导致逻辑错乱。`volatile` / `synchronized` / happens-before。
+
+**happens-before 原则（核心判定准则）：**
+A happens-before B ⇒ A 的所有修改对 B 都可见。
+单线程内happens-before天然成立，多线程下happens-before需要程序员显式建立。
+- 程序顺序规则：同一线程内，前面的操作 happens-before 后面的操作。
+- 锁规则：`unlock` happens-before 后续的 `lock`。
+- volatile 规则：写 volatile happens-before 后续读 volatile。
+- 线程启动规则：`Thread.start()` happens-before 线程内任意操作。
+- 线程终止规则：线程内所有操作 happens-before 其他线程 `join()` 返回。
+- 传递性：A hb B，B hb C ⇒ A hb C。
+
+**volatile 底层实现：**
+通过**内存屏障（Memory Barrier）** 防止重排序并保证可见性。
+- 写 volatile 后插入 StoreStore + StoreLoad 屏障，强制立即刷回主内存。
+- 读 volatile 前插入 LoadLoad + LoadStore 屏障，强制从主内存重新加载。
+- volatile **保证可见性和有序性，但不保证原子性**（如 `i++` 仍需用 `AtomicInteger`）。
